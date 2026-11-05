@@ -1,0 +1,5 @@
+{
+  "framework": "astro",
+  "buildCommand": "astro check && astro build",
+  "outputDirectory": "dist"
+}
