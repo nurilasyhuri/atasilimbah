@@ -1,0 +1,394 @@
+---
+import { COMPANY_INFO } from '../data/companyInfo';
+---
+
+<div class="bg-white rounded-lg border border-[#E2E6E1] p-6 sm:p-10 shadow-xs">
+  <div class="max-w-2xl mb-8">
+    <span class="text-xs font-bold uppercase tracking-wider text-[#123F35] block mb-2 font-tech">
+      FORMULIR REKAYASA TEKNIS
+    </span>
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-[#123F35] tracking-tight mb-2">
+      Konsultasikan Kebutuhan Mesin Incinerator Anda
+    </h2>
+    <p class="text-xs sm:text-sm text-[#576360] leading-relaxed">
+      Lengkapi data operasional di bawah ini agar tim teknis AtasiLimbah dapat mengkaji spesifikasi teknis dan menyusun surat penawaran resmi yang akurat.
+    </p>
+  </div>
+
+  <form id="rfq-form" class="space-y-6" novalidate>
+    <!-- Honeypot spam trap (hidden from real users) -->
+    <div class="hidden" aria-hidden="true">
+      <label for="rfq-hp-field">Jangan diisi:</label>
+      <input type="text" id="rfq-hp-field" name="website_trap" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <!-- Group 1: Profil Pemohon -->
+    <div class="space-y-4">
+      <h3 class="text-sm font-bold text-[#123F35] border-b border-[#E2E6E1] pb-2 uppercase tracking-wide">
+        1. Identitas Perusahaan / Pemohon
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="rfq-nama" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Nama Lengkap <span class="text-red-600">*</span>
+          </label>
+          <input
+            type="text"
+            id="rfq-nama"
+            name="nama"
+            required
+            placeholder="Contoh: Ir. Budi Santoso"
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all"
+          />
+          <span class="error-msg text-xs text-red-600 hidden mt-1">Nama lengkap wajib diisi</span>
+        </div>
+
+        <div>
+          <label for="rfq-perusahaan" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Nama Perusahaan / Lembaga / Yayasan <span class="text-red-600">*</span>
+          </label>
+          <input
+            type="text"
+            id="rfq-perusahaan"
+            name="perusahaan"
+            required
+            placeholder="Contoh: Pondok Pesantren Al-Hikmah / PT Surya Manufaktur"
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all"
+          />
+          <span class="error-msg text-xs text-red-600 hidden mt-1">Nama perusahaan / instansi wajib diisi</span>
+        </div>
+
+        <div>
+          <label for="rfq-whatsapp" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Nomor WhatsApp Aktif <span class="text-red-600">*</span>
+          </label>
+          <input
+            type="tel"
+            id="rfq-whatsapp"
+            name="whatsapp"
+            required
+            placeholder="Contoh: 081234567890"
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all font-tech"
+          />
+          <span class="error-msg text-xs text-red-600 hidden mt-1">Nomor WhatsApp tidak valid (minimal 10 digit)</span>
+        </div>
+
+        <div>
+          <label for="rfq-email" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Alamat Email Resmi <span class="text-red-600">*</span>
+          </label>
+          <input
+            type="email"
+            id="rfq-email"
+            name="email"
+            required
+            placeholder="Contoh: pengadaan@instansi.com"
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all"
+          />
+          <span class="error-msg text-xs text-red-600 hidden mt-1">Format email tidak valid</span>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label for="rfq-lokasi" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Kota / Kabupaten & Lokasi Rencana Pemasangan <span class="text-red-600">*</span>
+          </label>
+          <input
+            type="text"
+            id="rfq-lokasi"
+            name="lokasi"
+            required
+            placeholder="Contoh: Cikarang, Kab. Bekasi / Denpasar, Bali"
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all"
+          />
+          <span class="error-msg text-xs text-red-600 hidden mt-1">Lokasi rencana pemasangan wajib diisi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group 2: Parameter Teknis Sampah -->
+    <div class="space-y-4 pt-4">
+      <h3 class="text-sm font-bold text-[#123F35] border-b border-[#E2E6E1] pb-2 uppercase tracking-wide">
+        2. Parameter Sampah & Kebutuhan Mesin
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="rfq-kategori" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Jenis Kebutuhan Mesin <span class="text-red-600">*</span>
+          </label>
+          <select
+            id="rfq-kategori"
+            name="kategori_mesin"
+            required
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all"
+          >
+            <option value="">-- Pilih Jenis Mesin --</option>
+            <option value="Incinerator Sampah Kering">Incinerator Sampah Kering</option>
+            <option value="Incinerator Sampah Basah">Incinerator Sampah Basah</option>
+            <option value="Incinerator Limbah B3">Incinerator Limbah B3</option>
+            <option value="Custom Incinerator">Custom Incinerator</option>
+            <option value="Belum Mengetahui Jenis Mesin">Belum Mengetahui Jenis Mesin (Butuh Rekomendasi)</option>
+          </select>
+          <span class="error-msg text-xs text-red-600 hidden mt-1">Pilih salah satu jenis mesin</span>
+        </div>
+
+        <div>
+          <label for="rfq-volume" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Estimasi Volume Sampah Harian (kg/hari) <span class="text-red-600">*</span>
+          </label>
+          <input
+            type="text"
+            id="rfq-volume"
+            name="volume_harian"
+            required
+            placeholder="Contoh: 300 - 500 kg per hari"
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all font-tech"
+          />
+          <span class="error-msg text-xs text-red-600 hidden mt-1">Estimasi volume wajib diisi</span>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label for="rfq-jenissampah" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Rincian Karakteristik Material Sampah <span class="text-red-600">*</span>
+          </label>
+          <textarea
+            id="rfq-jenissampah"
+            name="jenis_sampah"
+            rows="2"
+            required
+            placeholder="Contoh: 70% kardus packing & kertas arsip, 30% potongan kain perca. Tidak ada plastik tebal."
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all"
+          ></textarea>
+          <span class="error-msg text-xs text-red-600 hidden mt-1">Uraikan jenis sampah yang akan diolah</span>
+        </div>
+
+        <div>
+          <label for="rfq-b3" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Klasifikasi Kode Limbah B3 (Jika Relevan)
+          </label>
+          <input
+            type="text"
+            id="rfq-b3"
+            name="klasifikasi_b3"
+            placeholder="Contoh: Limbah medis padat / majun terkontaminasi (kosongkan jika non-B3)"
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all"
+          />
+        </div>
+
+        <div>
+          <label for="rfq-jamoperasi" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Rencana Jam Operasional Tungku
+          </label>
+          <select
+            id="rfq-jamoperasi"
+            name="jam_operasional"
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all"
+          >
+            <option value="4 - 6 Jam per hari">4 - 6 Jam per hari (1 Shift Ringan)</option>
+            <option value="8 Jam per hari">8 Jam per hari (1 Shift Penuh)</option>
+            <option value="12 - 16 Jam per hari">12 - 16 Jam per hari (2 Shift)</option>
+            <option value="Kontinu 24 Jam">Kontinu 24 Jam (Operasional Industri)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="rfq-jadwal" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Perkiraan Waktu Pengadaan / Pembelian
+          </label>
+          <select
+            id="rfq-jadwal"
+            name="jadwal_pembelian"
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all"
+          >
+            <option value="Segera (< 1 Bulan)">Segera (&lt; 1 Bulan)</option>
+            <option value="1 - 3 Bulan ke depan">1 - 3 Bulan ke depan</option>
+            <option value="Anggaran Tahun Depan">Perencanaan Anggaran Tahun Depan</option>
+            <option value="Studi Kelayakan Teknis Awal">Studi Kelayakan Teknis Awal</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="rfq-catatan" class="block text-xs font-semibold text-[#1E2926] mb-1">
+            Catatan Tambahan / Keterbatasan Lahan
+          </label>
+          <input
+            type="text"
+            id="rfq-catatan"
+            name="catatan"
+            placeholder="Contoh: Lokasi pulau terpencil, pasokan listrik terbatas"
+            class="w-full px-3.5 py-2.5 text-sm bg-white border border-[#E2E6E1] rounded focus:outline-none focus:ring-2 focus:ring-[#123F35] focus:border-transparent transition-all"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Consent Checkbox -->
+    <div class="pt-2">
+      <label class="flex items-start gap-3 cursor-pointer select-none">
+        <input
+          type="checkbox"
+          id="rfq-consent"
+          name="persetujuan"
+          required
+          class="mt-1 w-4 h-4 text-[#123F35] rounded border-[#E2E6E1] focus:ring-[#123F35]"
+        />
+        <span class="text-xs text-[#576360] leading-relaxed">
+          Saya menyatakan data yang diisi benar dan menyetujui data ini digunakan oleh tim rekayasa AtasiLimbah untuk tindak lanjut pembuatan proposal penawaran resmi.
+        </span>
+      </label>
+      <span class="error-msg text-xs text-red-600 hidden mt-1 block">Persetujuan wajib dicentang sebelum mengirim form</span>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="pt-4 border-t border-[#E2E6E1]">
+      <button
+        type="submit"
+        id="rfq-submit-btn"
+        class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold text-white bg-[#123F35] hover:bg-[#1a574a] rounded shadow-xs transition-colors cursor-pointer"
+      >
+        Kirim Permintaan Penawaran Resmi
+      </button>
+    </div>
+  </form>
+
+  <!-- Success Confirmation Banner (Hidden by default) -->
+  <div id="rfq-success-modal" class="hidden mt-8 p-6 bg-emerald-50 rounded-lg border border-emerald-200">
+    <div class="flex items-start gap-4">
+      <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <h3 class="text-lg font-bold text-emerald-950">
+          Data Penawaran Berhasil Disiapkan!
+        </h3>
+        <p class="text-xs sm:text-sm text-emerald-900 leading-relaxed">
+          Terima kasih atas kepercayaan Anda. Ringkasan spesifikasi proyek Anda telah terformat. Untuk mempercepat analisis teknis dan komunikasi langsung dengan tim engineering AtasiLimbah, klik tombol di bawah ini:
+        </p>
+        <div class="pt-2">
+          <a
+            id="rfq-wa-forward-btn"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 text-xs sm:text-sm font-bold text-white bg-emerald-700 hover:bg-emerald-800 rounded shadow-xs transition-colors"
+          >
+            Kirimkan Ringkasan ke WhatsApp Tim Teknis &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ whatsappNumber: COMPANY_INFO.contact.whatsappNumber }}>
+  const form = document.getElementById('rfq-form');
+  const successBox = document.getElementById('rfq-success-modal');
+  const waBtn = document.getElementById('rfq-wa-forward-btn');
+
+  if (form && successBox && waBtn) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Check honeypot
+      const hp = document.getElementById('rfq-hp-field')?.value;
+      if (hp) {
+        console.warn('Spam detected');
+        return;
+      }
+
+      let hasError = false;
+
+      // Validate required text fields
+      const requiredInputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+      requiredInputs.forEach((input) => {
+        const errorMsg = input.parentElement.querySelector('.error-msg');
+        if (input.type === 'checkbox') {
+          if (!input.checked) {
+            hasError = true;
+            if (errorMsg) errorMsg.classList.remove('hidden');
+          } else {
+            if (errorMsg) errorMsg.classList.add('hidden');
+          }
+        } else if (!input.value.trim()) {
+          hasError = true;
+          input.classList.add('border-red-500');
+          if (errorMsg) errorMsg.classList.remove('hidden');
+        } else {
+          input.classList.remove('border-red-500');
+          if (errorMsg) errorMsg.classList.add('hidden');
+        }
+
+        // Email regex
+        if (input.type === 'email' && input.value.trim()) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(input.value.trim())) {
+            hasError = true;
+            input.classList.add('border-red-500');
+            if (errorMsg) errorMsg.classList.remove('hidden');
+          }
+        }
+
+        // Phone min digits
+        if (input.name === 'whatsapp' && input.value.trim()) {
+          const digits = input.value.replace(/\D/g, '');
+          if (digits.length < 10) {
+            hasError = true;
+            input.classList.add('border-red-500');
+            if (errorMsg) errorMsg.classList.remove('hidden');
+          }
+        }
+      });
+
+      if (hasError) {
+        const firstError = form.querySelector('.border-red-500');
+        if (firstError) firstError.focus();
+        return;
+      }
+
+      // Collect values
+      const formData = new FormData(form);
+      const nama = formData.get('nama') || '';
+      const perusahaan = formData.get('perusahaan') || '';
+      const wa = formData.get('whatsapp') || '';
+      const email = formData.get('email') || '';
+      const lokasi = formData.get('lokasi') || '';
+      const kategori = formData.get('kategori_mesin') || '';
+      const volume = formData.get('volume_harian') || '';
+      const jenisSampah = formData.get('jenis_sampah') || '';
+      const b3 = formData.get('klasifikasi_b3') || '-';
+      const jam = formData.get('jam_operasional') || '-';
+      const jadwal = formData.get('jadwal_pembelian') || '-';
+      const catatan = formData.get('catatan') || '-';
+
+      // Format WhatsApp Message
+      const waMessage = 
+`*PERMINTAAN PENAWARAN MESIN (RFQ) - ATASILIMBAH*
+
+*1. Identitas Pemohon:*
+• Nama: ${nama}
+• Instansi: ${perusahaan}
+• WhatsApp: ${wa}
+• Email: ${email}
+• Lokasi: ${lokasi}
+
+*2. Parameter Kebutuhan:*
+• Kategori Mesin: ${kategori}
+• Estimasi Timbulan: ${volume}
+• Karakteristik Sampah: ${jenisSampah}
+• Limbah B3: ${b3}
+• Jam Operasi: ${jam}
+• Timeline: ${jadwal}
+• Catatan Tambahan: ${catatan}
+
+Mohon ditindaklanjuti untuk kalkulasi spesifikasi teknis dan penawaran resmi. Terima kasih.`;
+
+      const encoded = encodeURIComponent(waMessage);
+      waBtn.href = `https://wa.me/${whatsappNumber}?text=${encoded}`;
+
+      // Show success
+      successBox.classList.remove('hidden');
+      successBox.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+</script>

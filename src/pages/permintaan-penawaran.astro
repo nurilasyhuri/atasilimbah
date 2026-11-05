@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RfqForm from '../components/RfqForm.astro';
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const pageTitle = 'Formulir Permintaan Penawaran Mesin Incinerator - AtasiLimbah';
+const pageDescription = 'Formulir resmi permintaan penawaran (RFQ) mesin incinerator AtasiLimbah untuk pengadaan instansi, pesantren, hotel, dan kawasan industri.';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-[#F3F5F2] py-12 lg:py-16 border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-[#576360] mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-[#123F35]">Permintaan Penawaran (RFQ)</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#123F35] tracking-tight mb-4">
+          Permintaan Penawaran Mesin Incinerator
+        </h1>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Kirimkan rincian parameter sampah fasilitas Anda untuk memperoleh surat penawaran harga resmi, simulasi konsumsi bahan bakar, dan rekomendasi model yang efisien.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Area -->
+  <section class="py-16 bg-white border-b border-[#E2E6E1]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <RfqForm />
+    </div>
+  </section>
+</BaseLayout>

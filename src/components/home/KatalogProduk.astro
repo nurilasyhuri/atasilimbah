@@ -1,0 +1,83 @@
+---
+// Katalog Produk section with Primary Dark Green (#123F35) and Pure White (#FFFFFF)
+import { getCollection } from 'astro:content';
+
+const allProducts = await getCollection('products');
+const sortedProducts = allProducts.sort((a, b) => (a.data.orderPriority || 99) - (b.data.orderPriority || 99)).slice(0, 6);
+---
+
+<section class="py-16 sm:py-20 lg:py-24 bg-white border-b border-[#E2E6E1]" aria-label="Katalog Mesin Incinerator">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header with right action button -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-14 gap-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1E2926] tracking-tight leading-tight">
+          Pilihan Kapasitas Mesin Incinerator
+        </h2>
+      </div>
+
+      <div class="shrink-0">
+        <a
+          href="/mesin-incinerator/"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#123F35]/30 hover:border-[#123F35] hover:text-[#123F35] text-xs sm:text-sm font-semibold text-[#1E2926] transition-colors duration-150"
+        >
+          <span>Katalog Lengkap</span>
+          <svg class="w-4 h-4 text-[#123F35]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Product Grid (6 items) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {sortedProducts.map((p) => {
+        const d = p.data;
+        const formattedPrice = d.price
+          ? `Rp ${Number(d.price).toLocaleString('id-ID')}`
+          : 'Hubungi Penjualan';
+
+        return (
+          <a
+            href={`/mesin-incinerator/${p.id}/`}
+            class="group block bg-white rounded-2xl border border-[#E2E6E1] p-5 hover:border-[#123F35] hover:shadow-md transition-colors duration-150 flex flex-col justify-between focus:outline-none"
+          >
+            <div>
+              <div class="overflow-hidden rounded-xl bg-[#F3F5F2] aspect-[4/3] mb-5 border border-[#E2E6E1] flex items-center justify-center p-2">
+                <img
+                  src={d.image || '/images/hero-incinerator.webp'}
+                  alt={d.title}
+                  class="w-full h-full object-cover rounded-lg group-hover:scale-104 transition-transform duration-200"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="text-center space-y-1.5 px-2">
+                <div class="text-xs font-bold text-[#123F35] font-tech uppercase tracking-wider">
+                  {d.modelCode}
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-[#1E2926] group-hover:text-[#123F35] transition-colors line-clamp-1">
+                  {d.title}
+                </h3>
+                <div class="text-sm font-extrabold text-[#123F35] font-tech">
+                  {formattedPrice}
+                  <span class="text-xs font-normal text-[#576360]"> / unit</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-[#E2E6E1] flex items-center justify-between text-xs text-[#576360]">
+              <span>Kapasitas: <strong class="text-[#1E2926] font-tech">{d.nominalCapacity}</strong></span>
+              <span class="text-[#123F35] font-bold group-hover:text-[#0e3129] group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                Detail →
+              </span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>

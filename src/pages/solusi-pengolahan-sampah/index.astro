@@ -1,0 +1,115 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { COMPANY_INFO } from '../../data/companyInfo';
+
+const solutions = await getCollection('solutions');
+solutions.sort((a, b) => a.data.orderPriority - b.data.orderPriority);
+
+const pageTitle = 'Solusi Pengolahan Sampah Berbagai Sektor Fasilitas - AtasiLimbah';
+const pageDescription = 'Pilihan solusi mesin incinerator untuk institusi pendidikan, pesantren, kawasan hotel komersial, dan pabrik industri dengan sistem mandiri teruji.';
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin berkonsultasi mengenai solusi pengolahan sampah untuk sektor fasilitas kami.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-[#F3F5F2] py-12 lg:py-16 border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-[#576360] mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-[#123F35]">Solusi Sektoral</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#123F35] tracking-tight mb-4">
+          Solusi Pengolahan Sampah Berdasarkan Sektor
+        </h1>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Karakteristik timbulan sampah, ritme operasional, serta kendala lahan bervariasi di tiap sektor. AtasiLimbah merancang konfigurasi mesin incinerator yang disesuaikan dengan kebutuhan nyata fasilitas Anda.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Cards List -->
+  <section class="py-16 bg-white border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      {solutions.map((sol) => (
+        <div class="p-8 bg-[#F3F5F2] rounded-lg border border-[#E2E6E1] grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-bold text-[#123F35] uppercase tracking-wider font-tech block">
+              SEKTOR: {sol.data.sector.toUpperCase()}
+            </span>
+            <h2 class="text-2xl font-bold text-[#123F35]">
+              <a href={`/${sol.id}/`} class="hover:underline underline-offset-4">
+                {sol.data.title}
+              </a>
+            </h2>
+            <p class="text-sm text-[#576360] leading-relaxed">
+              {sol.data.description}
+            </p>
+
+            <div class="pt-2">
+              <span class="block text-xs font-bold text-[#123F35] uppercase mb-2">Fasilitas Sasaran:</span>
+              <div class="flex flex-wrap gap-2">
+                {sol.data.targetFacilities.map((fac) => (
+                  <span class="text-xs px-2.5 py-1 bg-white rounded border border-[#E2E6E1] text-[#1E2926]">
+                    {fac}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 bg-white p-6 rounded border border-[#E2E6E1] space-y-4">
+            <span class="block text-xs font-bold text-[#123F35] uppercase">Keuntungan Utama:</span>
+            <ul class="space-y-2 text-xs text-[#576360]">
+              {sol.data.benefits.slice(0, 3).map((b) => (
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#123F35] shrink-0 mt-1"></span>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="pt-4 border-t border-[#E2E6E1]">
+              <a
+                href={`/${sol.id}/`}
+                class="inline-flex items-center justify-center w-full px-4 py-2.5 text-xs font-semibold text-white bg-[#123F35] hover:bg-[#1a574a] rounded transition-colors text-center"
+              >
+                Pelajari Solusi Sektor Lengkap &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Consultation CTA -->
+  <section class="py-16 bg-[#123F35] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        Fasilitas Anda Memiliki Kebutuhan Berbeda?
+      </h2>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed max-w-2xl mx-auto">
+        Diskusikan jenis material sampah spesifik fasilitas Anda bersama tim konsultan teknis AtasiLimbah untuk mendapatkan kalkulasi kapasitas yang efisien.
+      </p>
+      <div class="pt-2">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-[#123F35] bg-white hover:bg-slate-100 rounded shadow-xs transition-colors"
+        >
+          Konsultasi Solusi Sektoral via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

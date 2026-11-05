@@ -1,0 +1,317 @@
+{
+  "url": "http://localhost:4321/",
+  "capturedAt": "2026-11-05T12:42:42.340Z",
+  "viewports": {
+    "360": {
+      "height": 11695,
+      "title": "Produsen Mesin Incinerator Pengolahan Sampah - AtasiLimbah",
+      "fonts": [
+        {
+          "v": "Poppins",
+          "c": 4359
+        },
+        {
+          "v": "IBM Plex Sans",
+          "c": 623
+        }
+      ],
+      "sizes": [
+        {
+          "v": "12px",
+          "c": 2157
+        },
+        {
+          "v": "16px",
+          "c": 2125
+        },
+        {
+          "v": "14px",
+          "c": 327
+        },
+        {
+          "v": "24px",
+          "c": 244
+        },
+        {
+          "v": "18px",
+          "c": 91
+        },
+        {
+          "v": "20px",
+          "c": 38
+        }
+      ],
+      "palette": {
+        "text": [
+          {
+            "v": "rgb(30, 41, 38)",
+            "c": 1768
+          },
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 1142
+          },
+          {
+            "v": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+            "c": 870
+          },
+          {
+            "v": "oklch(0.929 0.013 255.508)",
+            "c": 462
+          },
+          {
+            "v": "rgb(18, 63, 53)",
+            "c": 428
+          },
+          {
+            "v": "rgb(87, 99, 96)",
+            "c": 186
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 3421757
+          },
+          {
+            "v": "rgb(243, 245, 242)",
+            "c": 1662774
+          },
+          {
+            "v": "rgb(18, 63, 53)",
+            "c": 1287236
+          },
+          {
+            "v": "rgb(14, 49, 41)",
+            "c": 407174
+          }
+        ]
+      },
+      "navLabels": [],
+      "buttons": 9,
+      "primaryButtons": 1,
+      "outboundLinks": 2,
+      "images": 15,
+      "h1": {
+        "el": "h1 \"Mesin Incinerator Dual Chamber Standar K\"",
+        "words": 6,
+        "lines": 2
+      }
+    },
+    "768": {
+      "height": 7259,
+      "title": "Produsen Mesin Incinerator Pengolahan Sampah - AtasiLimbah",
+      "fonts": [
+        {
+          "v": "Poppins",
+          "c": 4368
+        },
+        {
+          "v": "IBM Plex Sans",
+          "c": 623
+        }
+      ],
+      "sizes": [
+        {
+          "v": "16px",
+          "c": 1802
+        },
+        {
+          "v": "12px",
+          "c": 1284
+        },
+        {
+          "v": "14px",
+          "c": 1045
+        },
+        {
+          "v": "18px",
+          "c": 512
+        },
+        {
+          "v": "30px",
+          "c": 201
+        },
+        {
+          "v": "20px",
+          "c": 66
+        },
+        {
+          "v": "36px",
+          "c": 43
+        },
+        {
+          "v": "24px",
+          "c": 38
+        }
+      ],
+      "palette": {
+        "text": [
+          {
+            "v": "rgb(30, 41, 38)",
+            "c": 1768
+          },
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 1142
+          },
+          {
+            "v": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+            "c": 870
+          },
+          {
+            "v": "oklch(0.929 0.013 255.508)",
+            "c": 462
+          },
+          {
+            "v": "rgb(18, 63, 53)",
+            "c": 437
+          },
+          {
+            "v": "rgb(87, 99, 96)",
+            "c": 186
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 3849173
+          },
+          {
+            "v": "rgb(18, 63, 53)",
+            "c": 2057592
+          },
+          {
+            "v": "rgb(243, 245, 242)",
+            "c": 1914086
+          },
+          {
+            "v": "rgb(14, 49, 41)",
+            "c": 526221
+          }
+        ]
+      },
+      "navLabels": [],
+      "buttons": 10,
+      "primaryButtons": 2,
+      "outboundLinks": 2,
+      "images": 15,
+      "h1": {
+        "el": "h1 \"Mesin Incinerator Dual Chamber Standar K\"",
+        "words": 6,
+        "lines": 2
+      }
+    },
+    "1440": {
+      "height": 6062,
+      "title": "Produsen Mesin Incinerator Pengolahan Sampah - AtasiLimbah",
+      "fonts": [
+        {
+          "v": "Poppins",
+          "c": 4414
+        },
+        {
+          "v": "IBM Plex Sans",
+          "c": 623
+        }
+      ],
+      "sizes": [
+        {
+          "v": "16px",
+          "c": 1802
+        },
+        {
+          "v": "12px",
+          "c": 1284
+        },
+        {
+          "v": "14px",
+          "c": 1091
+        },
+        {
+          "v": "18px",
+          "c": 512
+        },
+        {
+          "v": "36px",
+          "c": 201
+        },
+        {
+          "v": "20px",
+          "c": 66
+        },
+        {
+          "v": "48px",
+          "c": 43
+        },
+        {
+          "v": "30px",
+          "c": 38
+        }
+      ],
+      "palette": {
+        "text": [
+          {
+            "v": "rgb(30, 41, 38)",
+            "c": 1768
+          },
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 1149
+          },
+          {
+            "v": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+            "c": 870
+          },
+          {
+            "v": "oklch(0.929 0.013 255.508)",
+            "c": 462
+          },
+          {
+            "v": "rgb(18, 63, 53)",
+            "c": 437
+          },
+          {
+            "v": "rgb(87, 99, 96)",
+            "c": 186
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 5642130
+          },
+          {
+            "v": "rgb(18, 63, 53)",
+            "c": 3118073
+          },
+          {
+            "v": "rgb(243, 245, 242)",
+            "c": 2499426
+          },
+          {
+            "v": "rgb(14, 49, 41)",
+            "c": 507076
+          }
+        ]
+      },
+      "navLabels": [
+        7,
+        6,
+        6,
+        9,
+        12,
+        6
+      ],
+      "buttons": 10,
+      "primaryButtons": 2,
+      "outboundLinks": 2,
+      "images": 15,
+      "h1": {
+        "el": "h1 \"Mesin Incinerator Dual Chamber Standar K\"",
+        "words": 6,
+        "lines": 2
+      }
+    }
+  }
+}

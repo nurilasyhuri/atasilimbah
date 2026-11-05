@@ -1,0 +1,983 @@
+{
+  "capturedAt": "2026-11-05T08:57:25.725Z",
+  "viewports": {
+    "390": {
+      "url": "http://localhost:4321/",
+      "width": 390,
+      "height": 13679,
+      "title": "Produsen Mesin Incinerator Pengolahan Sampah - AtasiLimbah",
+      "headingMax": 30,
+      "type": {
+        "families": [
+          {
+            "v": "Poppins",
+            "c": 6852
+          },
+          {
+            "v": "IBM Plex Sans",
+            "c": 796
+          }
+        ],
+        "sizes": [
+          {
+            "v": "16px",
+            "c": 4253
+          },
+          {
+            "v": "12px",
+            "c": 2252
+          },
+          {
+            "v": "14px",
+            "c": 618
+          },
+          {
+            "v": "24px",
+            "c": 289
+          },
+          {
+            "v": "18px",
+            "c": 120
+          },
+          {
+            "v": "30px",
+            "c": 116
+          }
+        ],
+        "weights": [
+          {
+            "v": "400",
+            "c": 4820
+          },
+          {
+            "v": "700",
+            "c": 2142
+          },
+          {
+            "v": "600",
+            "c": 366
+          },
+          {
+            "v": "800",
+            "c": 194
+          },
+          {
+            "v": "500",
+            "c": 126
+          }
+        ],
+        "roles": {
+          "h1": {
+            "size": "30px",
+            "weight": "700",
+            "lineHeight": "37.5px",
+            "letterSpacing": "-0.6px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "p": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h2": {
+            "size": "24px",
+            "weight": "700",
+            "lineHeight": "30px",
+            "letterSpacing": "-0.48px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h3": {
+            "size": "16px",
+            "weight": "700",
+            "lineHeight": "24px",
+            "letterSpacing": "-0.32px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "a": {
+            "size": "12px",
+            "weight": "400",
+            "lineHeight": "16px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          }
+        }
+      },
+      "color": {
+        "text": [
+          {
+            "v": "oklch(0.446 0.043 257.281)",
+            "c": 2819
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 1061
+          },
+          {
+            "v": "oklch(0.869 0.022 252.894)",
+            "c": 776
+          },
+          {
+            "v": "oklch(0.704 0.04 256.788)",
+            "c": 757
+          },
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 567
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 378
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 4864194.0625
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 1371338.8125
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 634109.125
+          },
+          {
+            "v": "rgb(248, 250, 252)",
+            "c": 500484
+          },
+          {
+            "v": "oklch(0.984 0.003 247.858)",
+            "c": 449352
+          },
+          {
+            "v": "oklch(0.968 0.007 247.896)",
+            "c": 424543.25
+          }
+        ]
+      },
+      "radius": [
+        {
+          "v": "3.35544e+07px",
+          "c": 29
+        },
+        {
+          "v": "16px",
+          "c": 28
+        },
+        {
+          "v": "12px",
+          "c": 17
+        },
+        {
+          "v": "8px",
+          "c": 7
+        }
+      ],
+      "sections": [
+        {
+          "tag": "header",
+          "y": 0,
+          "h": 73,
+          "bg": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "y": 73,
+          "h": 707,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": {
+            "tag": "h1",
+            "size": "30px",
+            "text": "Mesin Incinerator Dual ChamberSolusi Pemusnah Samp"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 780,
+          "h": 1231,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h2",
+            "size": "24px",
+            "text": "Layanan Pengolahan Sampah Termal"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 2011,
+          "h": 1079,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": {
+            "tag": "h2",
+            "size": "24px",
+            "text": "Alur Layanan Pengadaan"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 3090,
+          "h": 3035,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 7,
+          "heading": {
+            "tag": "h2",
+            "size": "24px",
+            "text": "Pilihan Kapasitas Mesin Incinerator"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 6125,
+          "h": 1461,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 5,
+          "heading": {
+            "tag": "h2",
+            "size": "24px",
+            "text": "Dokumentasi Fabrikasi & Instalasi Unit"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 7586,
+          "h": 1221,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h2",
+            "size": "24px",
+            "text": "Standar Rekayasa Termal & Regulasi Emisi"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 8807,
+          "h": 1166,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 8,
+          "heading": {
+            "tag": "h2",
+            "size": "24px",
+            "text": "Workshop Solo & Klaten"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 9973,
+          "h": 1067,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 5,
+          "heading": {
+            "tag": "h2",
+            "size": "24px",
+            "text": "Konsultasi Mesin & Estimasi Proyek"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 11040,
+          "h": 1083,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 7,
+          "heading": {
+            "tag": "h2",
+            "size": "24px",
+            "text": "Pertanyaan Seputar Mesin Incinerator"
+          }
+        },
+        {
+          "tag": "footer",
+          "y": 12123,
+          "h": 1556,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h3",
+            "size": "12px",
+            "text": "KATALOG MESIN"
+          }
+        }
+      ]
+    },
+    "768": {
+      "url": "http://localhost:4321/",
+      "width": 768,
+      "height": 9165,
+      "title": "Produsen Mesin Incinerator Pengolahan Sampah - AtasiLimbah",
+      "headingMax": 48,
+      "type": {
+        "families": [
+          {
+            "v": "Poppins",
+            "c": 6933
+          },
+          {
+            "v": "IBM Plex Sans",
+            "c": 810
+          }
+        ],
+        "sizes": [
+          {
+            "v": "16px",
+            "c": 4405
+          },
+          {
+            "v": "12px",
+            "c": 1876
+          },
+          {
+            "v": "14px",
+            "c": 615
+          },
+          {
+            "v": "18px",
+            "c": 339
+          },
+          {
+            "v": "30px",
+            "c": 297
+          },
+          {
+            "v": "48px",
+            "c": 108
+          },
+          {
+            "v": "20px",
+            "c": 103
+          }
+        ],
+        "weights": [
+          {
+            "v": "400",
+            "c": 4820
+          },
+          {
+            "v": "700",
+            "c": 2142
+          },
+          {
+            "v": "600",
+            "c": 389
+          },
+          {
+            "v": "500",
+            "c": 198
+          },
+          {
+            "v": "800",
+            "c": 194
+          }
+        ],
+        "roles": {
+          "h1": {
+            "size": "48px",
+            "weight": "700",
+            "lineHeight": "60px",
+            "letterSpacing": "-0.96px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "p": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h2": {
+            "size": "30px",
+            "weight": "700",
+            "lineHeight": "37.5px",
+            "letterSpacing": "-0.6px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h3": {
+            "size": "18px",
+            "weight": "700",
+            "lineHeight": "28px",
+            "letterSpacing": "-0.36px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "a": {
+            "size": "12px",
+            "weight": "400",
+            "lineHeight": "16px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          }
+        }
+      },
+      "color": {
+        "text": [
+          {
+            "v": "oklch(0.446 0.043 257.281)",
+            "c": 2819
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 1061
+          },
+          {
+            "v": "oklch(0.869 0.022 252.894)",
+            "c": 799
+          },
+          {
+            "v": "oklch(0.704 0.04 256.788)",
+            "c": 774
+          },
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 576
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 378
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 5644540
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 2204520
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 782983.189453125
+          },
+          {
+            "v": "rgb(248, 250, 252)",
+            "c": 720288
+          },
+          {
+            "v": "oklch(0.984 0.003 247.858)",
+            "c": 410418
+          },
+          {
+            "v": "oklch(0.968 0.007 247.896)",
+            "c": 246531.83349609375
+          }
+        ]
+      },
+      "radius": [
+        {
+          "v": "3.35544e+07px",
+          "c": 31
+        },
+        {
+          "v": "16px",
+          "c": 28
+        },
+        {
+          "v": "12px",
+          "c": 17
+        },
+        {
+          "v": "8px",
+          "c": 7
+        }
+      ],
+      "sections": [
+        {
+          "tag": "header",
+          "y": 0,
+          "h": 110,
+          "bg": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "y": 110,
+          "h": 751,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": {
+            "tag": "h1",
+            "size": "48px",
+            "text": "Mesin Incinerator Dual ChamberSolusi Pemusnah Samp"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 861,
+          "h": 561,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h2",
+            "size": "30px",
+            "text": "Layanan Pengolahan Sampah Termal"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 1422,
+          "h": 715,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": {
+            "tag": "h2",
+            "size": "30px",
+            "text": "Alur Layanan Pengadaan"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 2136,
+          "h": 1653,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 7,
+          "heading": {
+            "tag": "h2",
+            "size": "30px",
+            "text": "Pilihan Kapasitas Mesin Incinerator"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 3789,
+          "h": 866,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 5,
+          "heading": {
+            "tag": "h2",
+            "size": "30px",
+            "text": "Dokumentasi Fabrikasi & Instalasi Unit"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 4655,
+          "h": 1167,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h2",
+            "size": "30px",
+            "text": "Standar Rekayasa Termal & Regulasi Emisi"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 5821,
+          "h": 737,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 8,
+          "heading": {
+            "tag": "h2",
+            "size": "30px",
+            "text": "Workshop Solo & Klaten"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 6559,
+          "h": 635,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 5,
+          "heading": {
+            "tag": "h2",
+            "size": "30px",
+            "text": "Konsultasi Mesin & Estimasi Proyek"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 7194,
+          "h": 1047,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 7,
+          "heading": {
+            "tag": "h2",
+            "size": "30px",
+            "text": "Pertanyaan Seputar Mesin Incinerator"
+          }
+        },
+        {
+          "tag": "footer",
+          "y": 8241,
+          "h": 924,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h3",
+            "size": "12px",
+            "text": "KATALOG MESIN"
+          }
+        }
+      ]
+    },
+    "1440": {
+      "url": "http://localhost:4321/",
+      "width": 1440,
+      "height": 7784,
+      "title": "Produsen Mesin Incinerator Pengolahan Sampah - AtasiLimbah",
+      "headingMax": 48,
+      "type": {
+        "families": [
+          {
+            "v": "Poppins",
+            "c": 6979
+          },
+          {
+            "v": "IBM Plex Sans",
+            "c": 810
+          }
+        ],
+        "sizes": [
+          {
+            "v": "16px",
+            "c": 4405
+          },
+          {
+            "v": "12px",
+            "c": 1876
+          },
+          {
+            "v": "14px",
+            "c": 661
+          },
+          {
+            "v": "18px",
+            "c": 339
+          },
+          {
+            "v": "36px",
+            "c": 259
+          },
+          {
+            "v": "48px",
+            "c": 108
+          },
+          {
+            "v": "20px",
+            "c": 103
+          },
+          {
+            "v": "30px",
+            "c": 38
+          }
+        ],
+        "weights": [
+          {
+            "v": "400",
+            "c": 4820
+          },
+          {
+            "v": "700",
+            "c": 2142
+          },
+          {
+            "v": "600",
+            "c": 396
+          },
+          {
+            "v": "500",
+            "c": 237
+          },
+          {
+            "v": "800",
+            "c": 194
+          }
+        ],
+        "roles": {
+          "a": {
+            "size": "14px",
+            "weight": "600",
+            "lineHeight": "20px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h1": {
+            "size": "48px",
+            "weight": "700",
+            "lineHeight": "60px",
+            "letterSpacing": "-0.96px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "p": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h2": {
+            "size": "36px",
+            "weight": "700",
+            "lineHeight": "45px",
+            "letterSpacing": "-0.72px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h3": {
+            "size": "18px",
+            "weight": "700",
+            "lineHeight": "28px",
+            "letterSpacing": "-0.36px",
+            "family": "Poppins",
+            "transform": "none"
+          }
+        }
+      },
+      "color": {
+        "text": [
+          {
+            "v": "oklch(0.446 0.043 257.281)",
+            "c": 2819
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 1061
+          },
+          {
+            "v": "oklch(0.869 0.022 252.894)",
+            "c": 838
+          },
+          {
+            "v": "oklch(0.704 0.04 256.788)",
+            "c": 774
+          },
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 583
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 378
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 9297522
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 2844202.5
+          },
+          {
+            "v": "oklch(0.968 0.007 247.896)",
+            "c": 742208
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 730972.2778320312
+          },
+          {
+            "v": "rgb(248, 250, 252)",
+            "c": 710944
+          },
+          {
+            "v": "oklch(0.984 0.003 247.858)",
+            "c": 526338
+          }
+        ]
+      },
+      "radius": [
+        {
+          "v": "3.35544e+07px",
+          "c": 43
+        },
+        {
+          "v": "16px",
+          "c": 28
+        },
+        {
+          "v": "12px",
+          "c": 17
+        },
+        {
+          "v": "8px",
+          "c": 6
+        }
+      ],
+      "sections": [
+        {
+          "tag": "header",
+          "y": 0,
+          "h": 110,
+          "bg": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "y": 110,
+          "h": 700,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": {
+            "tag": "h1",
+            "size": "48px",
+            "text": "Mesin Incinerator Dual ChamberSolusi Pemusnah Samp"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 810,
+          "h": 703,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h2",
+            "size": "36px",
+            "text": "Layanan Pengolahan Sampah Termal"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 1513,
+          "h": 526,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": {
+            "tag": "h2",
+            "size": "36px",
+            "text": "Alur Layanan Pengadaan"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 2039,
+          "h": 1265,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 7,
+          "heading": {
+            "tag": "h2",
+            "size": "36px",
+            "text": "Pilihan Kapasitas Mesin Incinerator"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 3304,
+          "h": 537,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 5,
+          "heading": {
+            "tag": "h2",
+            "size": "36px",
+            "text": "Dokumentasi Fabrikasi & Instalasi Unit"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 3841,
+          "h": 730,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h2",
+            "size": "36px",
+            "text": "Standar Rekayasa Termal & Regulasi Emisi"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 4570,
+          "h": 867,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 8,
+          "heading": {
+            "tag": "h2",
+            "size": "36px",
+            "text": "Workshop Solo & Klaten"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 5437,
+          "h": 780,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 5,
+          "heading": {
+            "tag": "h2",
+            "size": "36px",
+            "text": "Konsultasi Mesin & Estimasi Proyek"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 6216,
+          "h": 1051,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 7,
+          "heading": {
+            "tag": "h2",
+            "size": "36px",
+            "text": "Pertanyaan Seputar Mesin Incinerator"
+          }
+        },
+        {
+          "tag": "footer",
+          "y": 7267,
+          "h": 517,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h3",
+            "size": "12px",
+            "text": "KATALOG MESIN"
+          }
+        }
+      ]
+    }
+  }
+}

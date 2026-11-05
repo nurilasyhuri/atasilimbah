@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const pageTitle = 'FAQ Teknis dan Panduan Pengadaan Incinerator - AtasiLimbah';
+const pageDescription = 'Jawaban lengkap seputar kapasitas, bahan bakar, regulasi emisi, dan prosedur pemesanan mesin incinerator produksi PT Atasi Limbah Indonesia.';
+
+const allFaqs = [
+  {
+    q: 'Apakah AtasiLimbah memproduksi mesin incinerator sendiri?',
+    a: 'Ya. AtasiLimbah merupakan produsen mesin incinerator langsung dengan workshop fabrikasi internal. Seluruh proses perakitan rangka baja, pemasangan bata api tahan api (refractory), instalasi burner, dan perakitan panel kontrol dilakukan oleh tim teknis kami.',
+  },
+  {
+    q: 'Apakah mesin dapat digunakan untuk sampah kering dan basah sekaligus?',
+    a: 'Pemilihan mesin harus disesuaikan dengan jenis dominan sampah. Mesin sampah kering optimal untuk material berkalor tinggi (kertas, kardus, kain, kayu). Sampah berkadar air tinggi (seperti sisa makanan dapur atau pasar) memerlukan perlakuan penirisan awal atau pemilihan unit dengan sistem pemanas pre-drying khusus guna mencegah pemborosan bahan bakar.',
+  },
+  {
+    q: 'Apakah tersedia mesin untuk pengolahan limbah B3?',
+    a: 'AtasiLimbah menyediakan jalur konsultasi teknis untuk rancang bangun incinerator limbah B3 padat tertentu. Penggunaannya wajib disesuaikan dengan klasifikasi limbah, suhu pembakaran sekunder di atas 1.000°C, pengendalian emisi bertingkat, serta ketentuan izin operasional lingkungan hidup yang dimiliki oleh fasilitas pemohon.',
+  },
+  {
+    q: 'Berapa kapasitas mesin yang tersedia di AtasiLimbah?',
+    a: 'Kami memproduksi model standar mulai kapasitas 50 kg/jam (AL-DK50) hingga 100 kg/jam (AL-DK100 & AL-DB100). Untuk kebutuhan tonase lebih besar (200 - 500+ kg/jam), kami menyediakan layanan rancang bangun custom.',
+  },
+  {
+    q: 'Apakah mesin dapat dibuat custom sesuai keterbatasan lokasi?',
+    a: 'Bisa. Kami melayani perancangan dimensi kustom, arah keluaran cerobong asap, sistem pengumpan sampah hidrolik, serta integrasi jenis bahan bakar (solar, gas LPG/CNG, atau listrik) sesuai ketersediaan utilitas di lokasi Anda.',
+  },
+  {
+    q: 'Berapa perkiraan harga mesin incinerator AtasiLimbah?',
+    a: 'Harga ditentukan secara objektif berdasarkan kapasitas pembakaran (kg/jam), kelengkapan sistem scrubber pengendali emisi, material bata api refractory yang dipilih, serta tingkat otomatisasi panel kontrol. Hubungi tim kami untuk mendapatkan surat penawaran harga resmi.',
+  },
+  {
+    q: 'Bagaimana menentukan kapasitas mesin yang dibutuhkan?',
+    a: 'Rumus dasarnya adalah: (Total Estimasi Berat Sampah Harian dalam kg) dibagi (Rencana Jam Kerja Pembakaran per Hari). Contoh: Timbulan 400 kg/hari dengan target selesai dalam 4 jam kerja membutuhkan mesin berkapasitas minimal 100 kg/jam (AL-DK100).',
+  },
+  {
+    q: 'Bagaimana prosedur perawatan (maintenance) mesin incinerator?',
+    a: 'Perawatan rutin mencakup pembersihan abu dasar harian setelah tungku dingin, pembersihan filter sirkulasi air wet scrubber setiap minggu, pengecekan nozzle burner solar secara berkala, dan inspeksi visual kondisi bata api refractory setiap 6-12 bulan.',
+  },
+];
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin bertanya lebih lanjut mengenai aspek teknis mesin incinerator.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-[#F3F5F2] py-12 lg:py-16 border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-[#576360] mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-[#123F35]">FAQ</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-[#123F35]/10 text-[#123F35] text-xs font-bold rounded mb-3 font-tech">
+          INFORMASI & JAWABAN TEKNIS
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#123F35] tracking-tight mb-4">
+          Tanya Jawab Seputar Mesin Incinerator
+        </h1>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Temukan jawaban jelas dan transparan mengenai operasional, efisiensi bahan bakar, standar keselamatan, serta tahapan pengadaan mesin incinerator AtasiLimbah.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion List -->
+  <section class="py-16 bg-white border-b border-[#E2E6E1]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      {allFaqs.map((faq) => (
+        <details class="group bg-[#F3F5F2] rounded-lg border border-[#E2E6E1] p-5 transition-colors">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-[#123F35] list-none select-none">
+            <span>{faq.q}</span>
+            <span class="ml-4 flex-shrink-0 text-[#123F35] group-open:rotate-180 transition-transform">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-3 pt-3 border-t border-[#E2E6E1] text-sm text-[#576360] leading-relaxed">
+            <p>{faq.a}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- Contextual Single Consultation CTA -->
+  <section class="py-16 bg-slate-950 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-[-0.015em]">
+        Punya Pertanyaan Teknis Lain yang Belum Terjawab?
+      </h2>
+      <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
+        Diskusikan langsung dengan tim rekayasa kami. Kami siap memberikan penjelasan teknis yang jujur dan dapat dipertanggungjawabkan.
+      </p>
+      <div class="pt-2">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs sm:text-sm font-bold text-white bg-[#123F35] hover:bg-[#0e3129] rounded-full shadow-xs transition-colors"
+        >
+          Tanya Langsung via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

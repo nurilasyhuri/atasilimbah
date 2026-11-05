@@ -1,0 +1,714 @@
+{
+  "capturedAt": "2026-11-05T09:35:41.834Z",
+  "viewports": {
+    "390": {
+      "url": "http://localhost:4321/mesin-incinerator/",
+      "width": 390,
+      "height": 10465,
+      "title": "Katalog Mesin Incinerator Berbagai Kapasitas - AtasiLimbah",
+      "headingMax": 30,
+      "type": {
+        "families": [
+          {
+            "v": "Poppins",
+            "c": 5502
+          },
+          {
+            "v": "IBM Plex Sans",
+            "c": 1027
+          }
+        ],
+        "sizes": [
+          {
+            "v": "16px",
+            "c": 3202
+          },
+          {
+            "v": "12px",
+            "c": 3161
+          },
+          {
+            "v": "20px",
+            "c": 52
+          },
+          {
+            "v": "30px",
+            "c": 44
+          },
+          {
+            "v": "24px",
+            "c": 36
+          },
+          {
+            "v": "18px",
+            "c": 34
+          }
+        ],
+        "weights": [
+          {
+            "v": "400",
+            "c": 3574
+          },
+          {
+            "v": "700",
+            "c": 1545
+          },
+          {
+            "v": "500",
+            "c": 756
+          },
+          {
+            "v": "600",
+            "c": 331
+          },
+          {
+            "v": "800",
+            "c": 323
+          }
+        ],
+        "roles": {
+          "a": {
+            "size": "12px",
+            "weight": "400",
+            "lineHeight": "16px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h1": {
+            "size": "30px",
+            "weight": "800",
+            "lineHeight": "36px",
+            "letterSpacing": "-0.6px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "p": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h2": {
+            "size": "24px",
+            "weight": "800",
+            "lineHeight": "32px",
+            "letterSpacing": "-0.48px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h3": {
+            "size": "16px",
+            "weight": "700",
+            "lineHeight": "24px",
+            "letterSpacing": "-0.32px",
+            "family": "Poppins",
+            "transform": "none"
+          }
+        }
+      },
+      "color": {
+        "text": [
+          {
+            "v": "oklch(0.446 0.043 257.281)",
+            "c": 2865
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 1397
+          },
+          {
+            "v": "oklch(0.704 0.04 256.788)",
+            "c": 778
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 545
+          },
+          {
+            "v": "oklch(0.554 0.046 257.417)",
+            "c": 312
+          },
+          {
+            "v": "oklch(0.646 0.222 41.116)",
+            "c": 252
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 5821147.90625
+          },
+          {
+            "v": "oklch(0.984 0.003 247.858)",
+            "c": 1418466
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 606827.8125
+          },
+          {
+            "v": "oklab(0.984 -0.00113071 -0.00277876 / 0.5)",
+            "c": 207548
+          },
+          {
+            "v": "oklab(0.208 -0.00310889 -0.0418848 / 0.8)",
+            "c": 93549.875
+          },
+          {
+            "v": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+            "c": 28470
+          }
+        ]
+      },
+      "radius": [
+        {
+          "v": "8px",
+          "c": 12
+        },
+        {
+          "v": "16px",
+          "c": 12
+        },
+        {
+          "v": "12px",
+          "c": 4
+        },
+        {
+          "v": "3.35544e+07px",
+          "c": 3
+        }
+      ],
+      "sections": [
+        {
+          "tag": "header",
+          "y": 0,
+          "h": 73,
+          "bg": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "y": 73,
+          "h": 499,
+          "bg": "oklch(0.984 0.003 247.858)",
+          "cols": 1,
+          "imgs": 0,
+          "heading": {
+            "tag": "h1",
+            "size": "30px",
+            "text": "Katalog Mesin Incinerator Berbagai Kapasitas"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 572,
+          "h": 8337,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 23,
+          "heading": {
+            "tag": "h2",
+            "size": "24px",
+            "text": "Pilihan Kapasitas & Spesifikasi Unit"
+          }
+        },
+        {
+          "tag": "footer",
+          "y": 8909,
+          "h": 1556,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h3",
+            "size": "12px",
+            "text": "KATALOG MESIN"
+          }
+        }
+      ]
+    },
+    "768": {
+      "url": "http://localhost:4321/mesin-incinerator/",
+      "width": 768,
+      "height": 6299,
+      "title": "Katalog Mesin Incinerator Berbagai Kapasitas - AtasiLimbah",
+      "headingMax": 36,
+      "type": {
+        "families": [
+          {
+            "v": "Poppins",
+            "c": 5583
+          },
+          {
+            "v": "IBM Plex Sans",
+            "c": 1041
+          }
+        ],
+        "sizes": [
+          {
+            "v": "12px",
+            "c": 3188
+          },
+          {
+            "v": "16px",
+            "c": 2484
+          },
+          {
+            "v": "18px",
+            "c": 735
+          },
+          {
+            "v": "14px",
+            "c": 68
+          },
+          {
+            "v": "24px",
+            "c": 52
+          },
+          {
+            "v": "36px",
+            "c": 44
+          },
+          {
+            "v": "30px",
+            "c": 36
+          },
+          {
+            "v": "20px",
+            "c": 17
+          }
+        ],
+        "weights": [
+          {
+            "v": "400",
+            "c": 3574
+          },
+          {
+            "v": "700",
+            "c": 1545
+          },
+          {
+            "v": "500",
+            "c": 828
+          },
+          {
+            "v": "600",
+            "c": 354
+          },
+          {
+            "v": "800",
+            "c": 323
+          }
+        ],
+        "roles": {
+          "a": {
+            "size": "12px",
+            "weight": "400",
+            "lineHeight": "16px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h1": {
+            "size": "36px",
+            "weight": "800",
+            "lineHeight": "40px",
+            "letterSpacing": "-0.72px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "p": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h2": {
+            "size": "30px",
+            "weight": "800",
+            "lineHeight": "36px",
+            "letterSpacing": "-0.6px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h3": {
+            "size": "18px",
+            "weight": "700",
+            "lineHeight": "28px",
+            "letterSpacing": "-0.36px",
+            "family": "Poppins",
+            "transform": "none"
+          }
+        }
+      },
+      "color": {
+        "text": [
+          {
+            "v": "oklch(0.446 0.043 257.281)",
+            "c": 2865
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 1397
+          },
+          {
+            "v": "oklch(0.704 0.04 256.788)",
+            "c": 795
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 545
+          },
+          {
+            "v": "oklch(0.554 0.046 257.417)",
+            "c": 312
+          },
+          {
+            "v": "oklch(0.646 0.222 41.116)",
+            "c": 252
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 6238804
+          },
+          {
+            "v": "oklch(0.984 0.003 247.858)",
+            "c": 1523193
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 731880
+          },
+          {
+            "v": "oklab(0.984 -0.00113071 -0.00277876 / 0.5)",
+            "c": 199386
+          },
+          {
+            "v": "oklab(0.208 -0.00310889 -0.0418848 / 0.8)",
+            "c": 88846.25
+          },
+          {
+            "v": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+            "c": 84480
+          }
+        ]
+      },
+      "radius": [
+        {
+          "v": "8px",
+          "c": 12
+        },
+        {
+          "v": "16px",
+          "c": 12
+        },
+        {
+          "v": "3.35544e+07px",
+          "c": 5
+        },
+        {
+          "v": "12px",
+          "c": 4
+        }
+      ],
+      "sections": [
+        {
+          "tag": "header",
+          "y": 0,
+          "h": 110,
+          "bg": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "y": 110,
+          "h": 395,
+          "bg": "oklch(0.984 0.003 247.858)",
+          "cols": 1,
+          "imgs": 0,
+          "heading": {
+            "tag": "h1",
+            "size": "36px",
+            "text": "Katalog Mesin Incinerator Berbagai Kapasitas"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 505,
+          "h": 4870,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 23,
+          "heading": {
+            "tag": "h2",
+            "size": "30px",
+            "text": "Pilihan Kapasitas & Spesifikasi Unit"
+          }
+        },
+        {
+          "tag": "footer",
+          "y": 5375,
+          "h": 924,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h3",
+            "size": "12px",
+            "text": "KATALOG MESIN"
+          }
+        }
+      ]
+    },
+    "1440": {
+      "url": "http://localhost:4321/mesin-incinerator/",
+      "width": 1440,
+      "height": 4521,
+      "title": "Katalog Mesin Incinerator Berbagai Kapasitas - AtasiLimbah",
+      "headingMax": 36,
+      "type": {
+        "families": [
+          {
+            "v": "Poppins",
+            "c": 5629
+          },
+          {
+            "v": "IBM Plex Sans",
+            "c": 1041
+          }
+        ],
+        "sizes": [
+          {
+            "v": "12px",
+            "c": 3188
+          },
+          {
+            "v": "16px",
+            "c": 2484
+          },
+          {
+            "v": "18px",
+            "c": 735
+          },
+          {
+            "v": "14px",
+            "c": 114
+          },
+          {
+            "v": "24px",
+            "c": 52
+          },
+          {
+            "v": "36px",
+            "c": 44
+          },
+          {
+            "v": "30px",
+            "c": 36
+          },
+          {
+            "v": "20px",
+            "c": 17
+          }
+        ],
+        "weights": [
+          {
+            "v": "400",
+            "c": 3574
+          },
+          {
+            "v": "700",
+            "c": 1545
+          },
+          {
+            "v": "500",
+            "c": 868
+          },
+          {
+            "v": "600",
+            "c": 360
+          },
+          {
+            "v": "800",
+            "c": 323
+          }
+        ],
+        "roles": {
+          "a": {
+            "size": "14px",
+            "weight": "500",
+            "lineHeight": "20px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h1": {
+            "size": "36px",
+            "weight": "800",
+            "lineHeight": "40px",
+            "letterSpacing": "-0.72px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "p": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h2": {
+            "size": "30px",
+            "weight": "800",
+            "lineHeight": "36px",
+            "letterSpacing": "-0.6px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h3": {
+            "size": "18px",
+            "weight": "700",
+            "lineHeight": "28px",
+            "letterSpacing": "-0.36px",
+            "family": "Poppins",
+            "transform": "none"
+          }
+        }
+      },
+      "color": {
+        "text": [
+          {
+            "v": "oklch(0.446 0.043 257.281)",
+            "c": 2865
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 1397
+          },
+          {
+            "v": "oklch(0.704 0.04 256.788)",
+            "c": 795
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 545
+          },
+          {
+            "v": "oklch(0.554 0.046 257.417)",
+            "c": 312
+          },
+          {
+            "v": "oklch(0.646 0.222 41.116)",
+            "c": 252
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 7930656
+          },
+          {
+            "v": "oklch(0.984 0.003 247.858)",
+            "c": 2144129
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 785722.5
+          },
+          {
+            "v": "oklab(0.984 -0.00113071 -0.00277876 / 0.5)",
+            "c": 222706
+          },
+          {
+            "v": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+            "c": 158400
+          },
+          {
+            "v": "oklab(0.208 -0.00310889 -0.0418848 / 0.8)",
+            "c": 100344
+          }
+        ]
+      },
+      "radius": [
+        {
+          "v": "16px",
+          "c": 12
+        },
+        {
+          "v": "3.35544e+07px",
+          "c": 11
+        },
+        {
+          "v": "8px",
+          "c": 11
+        },
+        {
+          "v": "12px",
+          "c": 4
+        }
+      ],
+      "sections": [
+        {
+          "tag": "header",
+          "y": 0,
+          "h": 110,
+          "bg": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "y": 110,
+          "h": 403,
+          "bg": "oklch(0.984 0.003 247.858)",
+          "cols": 1,
+          "imgs": 0,
+          "heading": {
+            "tag": "h1",
+            "size": "36px",
+            "text": "Katalog Mesin Incinerator Berbagai Kapasitas"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 513,
+          "h": 3491,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 23,
+          "heading": {
+            "tag": "h2",
+            "size": "30px",
+            "text": "Pilihan Kapasitas & Spesifikasi Unit"
+          }
+        },
+        {
+          "tag": "footer",
+          "y": 4004,
+          "h": 517,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h3",
+            "size": "12px",
+            "text": "KATALOG MESIN"
+          }
+        }
+      ]
+    }
+  }
+}

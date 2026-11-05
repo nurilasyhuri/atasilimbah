@@ -1,0 +1,149 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const allProducts = await getCollection('products');
+const customProducts = allProducts.filter((p) => p.data.category === 'custom');
+
+const pageTitle = 'Rancang Bangun Mesin Incinerator Custom Sistem - AtasiLimbah';
+const pageDescription = 'Layanan rekayasa rancang bangun incinerator custom berkapasitas besar atau tata letak khusus untuk industri manufaktur dan kawasan terpencil.';
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin mendiskusikan kebutuhan rancang bangun sistem mesin incinerator custom untuk proyek kami.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-[#F3F5F2] py-12 lg:py-16 border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-[#576360] mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li><a href="/mesin-incinerator/" class="hover:underline">Produk</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-[#123F35]">Custom System</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-[#123F35]/10 text-[#123F35] text-xs font-bold rounded mb-3 font-tech">
+          KATEGORI 04 — BESPOKE INDUSTRIAL ENGINEERING
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#123F35] tracking-tight mb-4">
+          Custom Incinerator Engineering System
+        </h1>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Layanan perancangan dan produksi mesin incinerator berdasarkan kebutuhan spesifik: kapasitas tonase tinggi, karakteristik material unik, keterbatasan denah lahan sipil, serta integrasi sistem utilitas pabrik.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Capabilities -->
+  <section class="py-16 bg-white border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#123F35] block mb-2">Fleksibilitas Rekayasa</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#123F35] tracking-tight mb-4">
+          Pilihan Kustomisasi Sistem Termal
+        </h2>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Kami menyesuaikan setiap parameter teknis agar mesin incinerator bekerja secara optimal di lokasi tanpa perlu merombak struktur bangunan utama Anda.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-6 bg-[#F3F5F2] rounded-lg border border-[#E2E6E1]">
+          <h3 class="text-lg font-bold text-[#123F35] mb-2">Kapasitas Skala Besar (Tonase)</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Perancangan tungku berkapasitas 200 hingga 1.000+ kg per jam dengan continuous feeding system (hydraulic ram feeder).
+          </p>
+        </div>
+
+        <div class="p-6 bg-[#F3F5F2] rounded-lg border border-[#E2E6E1]">
+          <h3 class="text-lg font-bold text-[#123F35] mb-2">Penyesuaian Dimensi & Tata Letak</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Desain dimensi horizontal atau vertikal mengikuti keterbatasan ruang (*footprint*) bangunan eksisting Anda melalui pemodelan CAD 3D.
+          </p>
+        </div>
+
+        <div class="p-6 bg-[#F3F5F2] rounded-lg border border-[#E2E6E1]">
+          <h3 class="text-lg font-bold text-[#123F35] mb-2">Pilihan Bahan Bakar Multiguna</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Integrasi burner dual-fuel (Solar + Gas LPG/CNG) atau pemanfaatan panas buang (*waste heat recovery*) untuk efisiensi energi.
+          </p>
+        </div>
+
+        <div class="p-6 bg-[#F3F5F2] rounded-lg border border-[#E2E6E1]">
+          <h3 class="text-lg font-bold text-[#123F35] mb-2">Material Refractory Khusus</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Pemilihan bata tahan api anti-asam, cor castable ekstra abrasif, atau plat baja stainless tahan korosi pada zona kritis.
+          </p>
+        </div>
+
+        <div class="p-6 bg-[#F3F5F2] rounded-lg border border-[#E2E6E1]">
+          <h3 class="text-lg font-bold text-[#123F35] mb-2">Otomasi Kontrol PLC & SCADA</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Sistem panel kontrol berbasis PLC touchscreen dengan perekaman data suhu (*datalogger*) dan pengoperasian semi-otomatis.
+          </p>
+        </div>
+
+        <div class="p-6 bg-[#F3F5F2] rounded-lg border border-[#E2E6E1]">
+          <h3 class="text-lg font-bold text-[#123F35] mb-2">Scrubber & Flue Gas Kustom</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Kombinasi cyclone, multi-venturi scrubber, dan baghouse filter yang disesuaikan dengan jenis polutan gas buang material spesifik.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Models -->
+  <section class="py-16 bg-[#F3F5F2] border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#123F35] block mb-2">Layanan Engineering</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#123F35] tracking-tight">
+          Layanan Custom Incinerator
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
+        {customProducts.map((p) => (
+          <ProductCard product={p} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contextual Single Consultation CTA -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#123F35] tracking-tight">
+        Diskusikan Kebutuhan Spesifikasi Custom Anda
+      </h2>
+      <p class="text-sm sm:text-base text-[#576360] leading-relaxed max-w-2xl mx-auto">
+        Kirimkan denah tata letak atau deskripsi material sampah pabrik Anda. Kami akan menyusun konsep desain teknis awal dan estimasi kebutuhan biaya.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs sm:text-sm font-bold text-white bg-[#123F35] hover:bg-[#0e3129] rounded-full shadow-xs transition-colors"
+        >
+          Diskusikan Kebutuhan Custom
+        </a>
+        <a
+          href="/permintaan-penawaran/"
+          class="text-xs sm:text-sm text-slate-600 hover:text-slate-950 underline underline-offset-4 transition-colors py-1"
+        >
+          Atau isi formulir RFQ &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

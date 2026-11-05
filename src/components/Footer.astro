@@ -1,0 +1,122 @@
+---
+// Footer section with Primary Dark Green (#123F35) and Pure White (#FFFFFF)
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-[#123F35] text-slate-200 pt-16 pb-12 border-t border-white/10" aria-label="Footer Resmi AtasiLimbah">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-white/10">
+      <!-- Column 1: Brand & Positioning (4 cols) -->
+      <div class="lg:col-span-4 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-[#0e3129] border border-white/15 flex items-center justify-center text-white shrink-0">
+            <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="text-lg font-bold tracking-tight text-white leading-tight">
+              ATASI<span class="text-white font-extrabold">LIMBAH</span>
+            </div>
+            <div class="text-xs uppercase tracking-wider font-semibold text-white/70">
+              {COMPANY_INFO.legalName}
+            </div>
+          </div>
+        </div>
+
+        <p class="text-xs text-white/80 leading-relaxed pr-2">
+          Pusat rekayasa dan fabrikasi mesin incinerator dual chamber standar baku mutu emisi KLHK untuk pengolahan sampah mandiri institusi, komersial, dan industri.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-2 pt-1">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-[#0e3129] border border-white/15 text-white text-xs font-semibold">
+            Dual Chamber SNI
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0e3129] border border-white/15 text-white text-xs font-medium">
+            <svg class="w-3.5 h-3.5 text-white shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            Standar Mutu KLHK P.70/2016
+          </span>
+        </div>
+
+        <div class="space-y-1 pt-2 text-xs text-white/80">
+          <div>Hotline WhatsApp: <a href="#konsultasi" class="text-white hover:underline font-tech font-bold">0851-8300-5070</a></div>
+          <div>Jam Operasional: Senin – Sabtu: 08.00 – 17.00 WIB</div>
+        </div>
+      </div>
+
+      <!-- Column 2: Katalog Mesin (2 cols) -->
+      <div class="lg:col-span-2 space-y-3">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-white font-tech">KATALOG MESIN</h3>
+        <ul class="space-y-1 text-xs text-white/80">
+          <li><a href="/mesin-incinerator/al-1000j/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator AL-1000J (1 Ton/Jam)</a></li>
+          <li><a href="/mesin-incinerator/al-b3-100j/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator B3 AL-B3-100J</a></li>
+          <li><a href="/mesin-incinerator/al-1500h/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator AL-1500H</a></li>
+          <li><a href="/mesin-incinerator/al-1000h/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator AL-1000H</a></li>
+          <li><a href="/mesin-incinerator/al-200j/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator AL-200J</a></li>
+          <li><a href="/mesin-incinerator/al-500h/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator AL-500H</a></li>
+          <li class="pt-1">
+            <a href="/mesin-incinerator/" class="inline-flex items-center min-h-[28px] text-white hover:underline font-semibold gap-1">
+              <span>Semua Produk</span>
+              <span>&rarr;</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Kategori Brief (3 cols) -->
+      <div class="lg:col-span-3 space-y-3">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-white font-tech">KATEGORI INCINERATOR</h3>
+        <ul class="space-y-1 text-xs text-white/80">
+          <li><a href="/incinerator-sampah-kering/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator Sampah Kering</a></li>
+          <li><a href="/incinerator-sampah-basah/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator Sampah Basah</a></li>
+          <li><a href="/incinerator-sampah-campuran/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator Sampah Campuran Non-B3</a></li>
+          <li><a href="/incinerator-limbah-b3/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator Limbah B3</a></li>
+          <li><a href="/incinerator-industri/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Incinerator Industri & Pabrik</a></li>
+          <li><a href="/incinerator-custom/" class="inline-flex items-center min-h-[28px] hover:text-white transition-colors">Custom Incinerator System</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Pengiriman & Komisioning (3 cols) -->
+      <div class="lg:col-span-3 space-y-3">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-white font-tech">PENGIRIMAN & INSTALASI</h3>
+        <div class="space-y-3">
+          <div class="p-3.5 rounded-xl bg-[#0e3129] border border-white/15 space-y-1.5">
+            <div class="flex items-center gap-1.5 text-xs font-bold text-white">
+              <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>Pengiriman Seluruh Indonesia</span>
+            </div>
+            <p class="text-xs text-white/80 leading-relaxed">
+              Melayani pengiriman ekspedisi logistik alat berat ke seluruh pulau di Indonesia dengan packing baja dan proteksi refractory.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-[#0e3129] border border-white/15 space-y-1.5">
+            <div class="flex items-center gap-1.5 text-xs font-bold text-white">
+              <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              <span>Komisioning & Pelatihan On-Site</span>
+            </div>
+            <p class="text-xs text-white/80 leading-relaxed">
+              Didampingi teknisi berpengalaman untuk uji bakar (*test burn*), setting pembakaran optimal, dan sertifikasi operator fasilitas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/70 gap-4">
+      <p>&copy; {currentYear} {COMPANY_INFO.legalName}. Hak cipta dilindungi undang-undang.</p>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="/tentang-kami/" class="text-white/70 hover:text-white transition-colors">Tentang Kami</a>
+        <span>•</span>
+        <a href="/kontak/" class="text-white/70 hover:text-white transition-colors">Kontak</a>
+        <span>•</span>
+        <a href="/permintaan-penawaran/" class="text-white/70 hover:text-white transition-colors">Permintaan SPH</a>
+      </div>
+    </div>
+  </div>
+</footer>

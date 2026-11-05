@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const pageTitle = 'Proses Produksi dan Fabrikasi Incinerator - AtasiLimbah';
+const pageDescription = 'Alur 6 tahapan fabrikasi mesin incinerator dari konsultasi teknis, perhitungan nilai kalor, perakitan plat baja, hingga uji fungsi dan serah terima.';
+
+const steps = [
+  {
+    num: '01',
+    title: 'Konsultasi Karakteristik Sampah',
+    desc: 'Kami mendengarkan kebutuhan Anda: jenis material dominan (kardus, kertas, sisa makanan, residu manufaktur), estimasi volume harian dalam kilogram, dan ketersediaan lahan instalasi.',
+  },
+  {
+    num: '02',
+    title: 'Analisis Termodinamika & Kalor',
+    desc: 'Tim rekayasa menghitung perkiraan nilai kalor LHV, kadar air, rasio pasokan udara pembakaran, serta menentukan dimensi ruang bakar primer dan sekunder.',
+  },
+  {
+    num: '03',
+    title: 'Rekomendasi Spesifikasi & Desain',
+    desc: 'Penyusunan gambar konsep teknis, pemilihan spesifikasi bata tahan api (SK-34 / SK-36 / SK-38), kapasitas burner bahan bakar, serta sistem scrubber yang sesuai.',
+  },
+  {
+    num: '04',
+    title: 'Penerbitan Surat Penawaran Resmi',
+    desc: 'Dokumen penawaran formal mencantumkan rincian spesifikasi, ruang lingkup pengerjaan sipil/mekanikal, garansi struktur, jadwal pengiriman, dan ketentuan pembayaran transparan.',
+  },
+  {
+    num: '05',
+    title: 'Fabrikasi Workshop & Quality Control',
+    desc: 'Pemotongan plat baja tebal (6-12mm), pengelasan struktur utama, pemasangan bata api refractory dan semen tahan api, perakitan blower, perpipaan scrubber, serta instalasi panel kontrol PLC.',
+  },
+  {
+    num: '06',
+    title: 'Uji Fungsi (Test-Run) & Commissioning',
+    desc: 'Pengujian penyalaan burner, verifikasi sensor temperatur interlock, uji semprotan air wet scrubber di workshop, dilanjutkan pengiriman unit ke lokasi dan pelatihan operator pelanggan.',
+  },
+];
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin berkonsultasi mengenai proses produksi dan estimasi waktu fabrikasi mesin incinerator.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-[#F3F5F2] py-12 lg:py-16 border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-[#576360] mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-[#123F35]">Proses Produksi</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-[#123F35]/10 text-[#123F35] text-xs font-bold rounded mb-3 font-tech">
+          STANDAR FABRIKASI
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#123F35] tracking-tight mb-4">
+          Dari Kebutuhan Menjadi Mesin yang Sesuai
+        </h1>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Tahapan manufaktur terstruktur memastikan setiap unit incinerator yang keluar dari workshop AtasiLimbah memiliki ketahanan termal tinggi, efisiensi konsumsi bahan bakar, dan aman dioperasikan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 Steps Detailed Grid -->
+  <section class="py-16 bg-white border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {steps.map((st) => (
+          <div class="p-6 bg-[#F3F5F2] rounded-lg border border-[#E2E6E1] flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-extrabold text-[#123F35] font-tech">{st.num}</span>
+                <span class="text-xs font-semibold px-2 py-0.5 bg-white text-[#123F35] rounded border border-[#E2E6E1]">
+                  Tahap {st.num}
+                </span>
+              </div>
+              <h2 class="text-lg font-bold text-[#123F35] mb-2">{st.title}</h2>
+              <p class="text-xs sm:text-sm text-[#576360] leading-relaxed">{st.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Assurance Callout -->
+  <section class="py-16 bg-[#F3F5F2]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#123F35] tracking-tight">
+        Konsultasikan Jadwal & Kapasitas Produksi
+      </h2>
+      <p class="text-sm sm:text-base text-[#576360] leading-relaxed max-w-2xl mx-auto">
+        Ketahui estimasi *lead-time* pengerjaan unit standar (2-4 minggu) atau unit custom (4-8 minggu) berdasarkan antrean workshop aktif saat ini.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs sm:text-sm font-bold text-white bg-[#123F35] hover:bg-[#0e3129] rounded-full shadow-xs transition-colors"
+        >
+          Tanya Jadwal Produksi via WhatsApp
+        </a>
+        <a
+          href="/permintaan-penawaran/"
+          class="text-xs sm:text-sm text-slate-600 hover:text-slate-950 underline underline-offset-4 transition-colors py-1"
+        >
+          Atau kirim formulir RFQ &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

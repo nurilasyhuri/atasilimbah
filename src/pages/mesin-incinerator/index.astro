@@ -1,0 +1,114 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { COMPANY_INFO } from '../../data/companyInfo';
+
+const products = await getCollection('products');
+products.sort((a, b) => a.data.orderPriority - b.data.orderPriority);
+
+const pageTitle = 'Katalog Mesin Incinerator Berbagai Kapasitas - AtasiLimbah';
+const pageDescription = 'Katalog lengkap mesin incinerator sampah kering, basah, dan custom berbagai kapasitas dengan spesifikasi teknis transparan dan harga resmi pabrik.';
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin meminta katalog spesifikasi dan konsultasi pemilihan kapasitas mesin incinerator.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Page Header -->
+  <section class="bg-slate-50 py-12 lg:py-16 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-slate-500 mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5 flex-wrap">
+          <li><a href="/" class="hover:underline inline-block py-1">Beranda</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-slate-900 inline-block py-1">Mesin Incinerator</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <span class="text-xs uppercase tracking-widest text-[#123F35] font-bold block mb-2">KATALOG PRODUK & PRICELIST RESMI</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-[-0.015em] mb-3">
+          Katalog Mesin Incinerator Berbagai Kapasitas
+        </h1>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          Temukan model mesin incinerator berdasarkan klasifikasi sampah, kapasitas pengolahan (kg/jam atau kg/hari), sistem non-BBM ramah lingkungan, serta kelengkapan wet scrubber dan filter karbon.
+        </p>
+      </div>
+
+      <!-- Quick Category Links -->
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-2 pt-6 text-xs text-slate-600">
+        <span class="font-semibold text-slate-800">Kategori Spesifik:</span>
+        <a href="/incinerator-sampah-kering/" class="hover:text-[#123F35] hover:underline">
+          Incinerator Sampah Kering
+        </a>
+        <span class="text-slate-300">•</span>
+        <a href="/incinerator-sampah-basah/" class="hover:text-[#123F35] hover:underline">
+          Incinerator Sampah Basah
+        </a>
+        <span class="text-slate-300">•</span>
+        <a href="/incinerator-limbah-b3/" class="hover:text-[#123F35] hover:underline">
+          Incinerator Limbah B3
+        </a>
+        <span class="text-slate-300">•</span>
+        <a href="/incinerator-custom/" class="hover:text-[#123F35] hover:underline">
+          Custom System
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 pb-4 border-b border-slate-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-[#123F35] font-tech">LINEUP UNIT STANDAR & CUSTOM</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-[-0.015em] mt-1">
+            Pilihan Kapasitas & Spesifikasi Unit
+          </h2>
+        </div>
+        <p class="text-xs text-slate-500 max-w-md">
+          Semua unit dilengkapi cyclone/wet scrubber dan filter karbon aktif untuk emisi bersih standar KLHK.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {products.map((prod) => (
+          <ProductCard product={prod} />
+        ))}
+      </div>
+
+      <!-- Selection Guidance Box (Signature MSC Reassurance style) -->
+      <div class="mt-16 p-8 sm:p-10 bg-slate-50 rounded-2xl border border-slate-200">
+        <span class="text-xs uppercase tracking-widest text-[#123F35] font-bold block mb-2">PANDUAN PEMILIHAN KAPASITAS</span>
+        <h3 class="text-xl sm:text-2xl font-bold text-slate-950 mb-3">
+          Belum Mengetahui Kapasitas & Tipe yang Paling Tepat?
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 max-w-3xl">
+          Penentuan mesin yang efisien membutuhkan sinkronisasi antara volume sampah harian (kg), kadar air material, dan rencana jam operasional tungku per hari. Tim rekayasa AtasiLimbah siap membantu Anda melakukan evaluasi awal tanpa biaya.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <a
+            href={waUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-[#123F35] hover:bg-[#0e3129] transition-colors shadow-xs"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            Konsultasi WhatsApp Teknis
+          </a>
+          <a
+            href="/permintaan-penawaran/"
+            class="text-xs sm:text-sm text-slate-600 hover:text-slate-950 transition-colors underline underline-offset-4 py-1"
+          >
+            Atau kirim rincian formulir RFQ &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

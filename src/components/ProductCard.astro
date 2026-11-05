@@ -1,0 +1,89 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  product: CollectionEntry<'products'>;
+}
+
+const { product } = Astro.props;
+const data = product.data;
+
+const formattedPrice = data.price
+  ? `Rp ${Number(data.price).toLocaleString('id-ID')},-`
+  : 'Hubungi Tim Penjualan';
+---
+
+<a
+  href={`/mesin-incinerator/${product.id}/`}
+  class="group block bg-white rounded-2xl border border-[#E2E6E1] overflow-hidden hover:border-[#123F35] hover:shadow-md transition-colors duration-150 flex flex-col justify-between focus:outline-none"
+>
+  <div>
+    <!-- Product Thumbnail -->
+    <div class="overflow-hidden bg-[#F3F5F2] aspect-[4/3] border-b border-[#E2E6E1] p-3 flex items-center justify-center">
+      <img
+        src={data.image || '/images/hero-incinerator.webp'}
+        alt={data.title}
+        class="w-full h-full object-cover rounded-lg group-hover:scale-103 transition-transform duration-200"
+        width="400"
+        height="300"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="p-6">
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <span class="text-xs font-bold text-[#123F35] font-tech tracking-wider uppercase">
+          {data.modelCode}
+        </span>
+        <span class="text-xs text-[#576360] font-semibold font-tech">
+          {data.nominalCapacity}
+        </span>
+      </div>
+
+      <h3 class="text-base sm:text-lg font-bold text-[#1E2926] group-hover:text-[#123F35] transition-colors duration-150 mb-1.5">
+        {data.title}
+      </h3>
+
+      <!-- Price Tag -->
+      <div class="mb-3">
+        <span class="text-base sm:text-lg font-extrabold text-[#123F35] font-tech">
+          {formattedPrice}
+        </span>
+      </div>
+
+      <p class="text-xs text-[#576360] leading-relaxed mb-4 line-clamp-2">
+        {data.description}
+      </p>
+
+      <!-- Key Spec Badges -->
+      <div class="space-y-2 pt-3 border-t border-[#E2E6E1] text-xs">
+        <div class="flex justify-between text-[#576360]">
+          <span class="font-medium">Kapasitas Desain:</span>
+          <span class="font-bold text-[#1E2926] font-tech">{data.nominalCapacity}</span>
+        </div>
+        <div class="flex justify-between text-[#576360]">
+          <span class="font-medium">Suhu Operasional:</span>
+          <span class="font-bold text-[#123F35] font-tech">{data.operatingTemp || '800°C - 1.000°C'}</span>
+        </div>
+        <div class="flex justify-between text-[#576360]">
+          <span class="font-medium">Bahan Bakar:</span>
+          <span class="text-[#1E2926] truncate max-w-[170px]">{data.fuelType.split('/')[0]}</span>
+        </div>
+        <div class="flex justify-between text-[#576360]">
+          <span class="font-medium">Pengendali Emisi:</span>
+          <span class="text-[#1E2926] truncate max-w-[170px]">{data.emissionControl.split('&')[0]}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 pt-3 border-t border-[#E2E6E1] bg-[#F3F5F2] flex items-center justify-between">
+    <span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#1E2926] group-hover:text-[#123F35] transition-colors duration-150">
+      <span>Spesifikasi Lengkap & Harga</span>
+      <svg class="w-3.5 h-3.5 text-[#123F35] group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12h14"></path>
+        <path d="m12 5 7 7-7 7"></path>
+      </svg>
+    </span>
+  </div>
+</a>

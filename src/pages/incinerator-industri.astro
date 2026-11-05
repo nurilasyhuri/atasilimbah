@@ -1,0 +1,129 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const allProducts = await getCollection('products');
+// Industrial incinerators: high capacity, continuous, and custom heavy duty models
+const industrialProducts = allProducts.filter((p) => 
+  p.data.modelCode === 'AL-1000J' ||
+  p.data.modelCode === 'AL-1500H' ||
+  p.data.modelCode === 'AL-200J' ||
+  p.data.modelCode === 'AL-1000H' ||
+  p.data.modelCode === 'AL-B3-100J' ||
+  p.data.modelCode === 'AL-CUST'
+).slice(0, 6);
+
+const pageTitle = 'Incinerator Industri Kapasitas Besar Pabrik - AtasiLimbah';
+const pageDescription = 'Mesin incinerator industri untuk pabrik dan kawasan industri dengan kapasitas tinggi, continuous feeding, pemantauan CEMS, dan standar emisi KLHK.';
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin berkonsultasi mengenai mesin incinerator industri pabrik dan kawasan.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-slate-50 py-12 lg:py-16 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-slate-500 mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li><a href="/mesin-incinerator/" class="hover:underline">Produk</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-slate-900">Incinerator Industri</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight mb-4">
+          Incinerator Industri & Pabrik
+        </h1>
+        <p class="text-base text-slate-600 leading-relaxed">
+          Sistem insinerasi termal kapasitas besar yang dirancang untuk pengolahan residu produksi mandiri di lingkungan pabrik, manufaktur, dan kawasan industri modern dengan kepatuhan baku mutu lingkungan KLHK.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Operating Parameters -->
+  <section class="py-16 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-950 mb-4">
+            Karakteristik & Sasaran Industri
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">
+            Dikonstruksi dengan spesifikasi heavy-duty untuk menangani beban operasional kontinu (hingga 24 jam) dengan otomasi conveyor feeding dan pemantauan terpusat.
+          </p>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+              <strong class="text-slate-950 block mb-1">Target Fasilitas:</strong>
+              <span class="text-slate-600">Pabrik manufaktur, kawasan industri terpadu, industri makanan & minuman, tekstil, kemasan, dan gudang logistik besar.</span>
+            </div>
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+              <strong class="text-slate-950 block mb-1">Sistem Otomasi Feeding & De-ashing:</strong>
+              <span class="text-slate-600">Dukungan hydraulic ram feeder atau continuous conveyor untuk pengumpanan sampah stabil tanpa membuka pintu tungku secara manual.</span>
+            </div>
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+              <strong class="text-slate-950 block mb-1">Pengendali Polusi Udara 3 Tahap:</strong>
+              <span class="text-slate-600">Integrasi cyclone separator, multi-stage wet scrubber venturi, dan opsi Electrostatic Precipitator (ESP) dengan sensor CEMS cerobong.</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-slate-950 mb-4">
+            Kepatuhan Emisi & Standardisasi Pabrik
+          </h2>
+          <div class="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p>
+              Setiap rancang bangun incinerator industri AtasiLimbah mengacu pada parameter PermenLHK P.70/2016, dengan suhu operasional primer 800°C–1.000°C dan sekunder hingga 1.300°C untuk menjamin penguraian rantai hidrokarbon kompleks dan dioksin/furan.
+            </p>
+            <p>
+              Refraktori tungku menggunakan bata tahan api alumina silika tinggi (SK-34 hingga SK-36) yang dikombinasikan dengan semen cor tahan api dan isolasi rockwool berlapis ganda, menghasilkan dinding luar bersuhu dingin aman (± 40°C).
+            </p>
+            <div class="p-4 bg-orange-50 border-l-4 border-orange-500 rounded-r-xl text-orange-950">
+              <strong>Konsultasi Teknis & Site Assessment Pabrik:</strong>
+              <p class="mt-1">Tim engineering kami siap melakukan kunjungan site assessment ke lokasi pabrik Anda untuk menentukan tata letak cerobong dan kebutuhan daya listrik pabrik.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Lineup Grid -->
+  <section class="py-16 sm:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+          Pilihan Model Incinerator Industri
+        </h2>
+        <p class="text-sm text-slate-600 mt-2">
+          Model kapasitas tinggi dan kontinu yang siap diintegrasikan pada operasional fasilitas pabrik.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {industrialProducts.map((p) => (
+          <ProductCard product={p} />
+        ))}
+      </div>
+
+      <div class="mt-14 text-center">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-md transition-colors"
+        >
+          <span>Konsultasi Spesifikasi Industri via WhatsApp 0851-8300-5070</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

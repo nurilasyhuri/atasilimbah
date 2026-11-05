@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/home/Hero.astro';
+import LayananUtama from '../components/home/LayananUtama.astro';
+import AlurLayanan from '../components/home/AlurLayanan.astro';
+import KatalogProduk from '../components/home/KatalogProduk.astro';
+import DokumentasiProyek from '../components/home/DokumentasiProyek.astro';
+import StandarRegulasi from '../components/home/StandarRegulasi.astro';
+import KonsultasiTim from '../components/home/KonsultasiTim.astro';
+
+const pageTitle = 'Produsen Mesin Incinerator Pengolahan Sampah - AtasiLimbah';
+const pageDescription = 'Produsen mesin incinerator dual chamber standar mutu emisi KLHK. Suhu 800°C-1.200°C, cyclone scrubber, kapasitas 200 kg hingga 1 ton per hari.';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Section 1: Hero (Full-bleed equipment background, dark green vignette, gold dual-tone) -->
+  <Hero />
+
+  <!-- Section 2: Layanan Utama (3-Column image cards) -->
+  <LayananUtama />
+
+  <!-- Section 3: Alur Layanan (4 Steps with gold numbers & clean cards) -->
+  <AlurLayanan />
+
+  <!-- Section 4: Katalog Produk (Clean white product cards, model code, capacity & price) -->
+  <KatalogProduk />
+
+  <!-- Section 5: Dokumentasi Proyek (Real fabrication & installation photos) -->
+  <DokumentasiProyek />
+
+  <!-- Section 6: Standar Regulasi & Emisi (High-contrast primary dark green section) -->
+  <StandarRegulasi />
+
+  <!-- Section 7: Konsultasi Tim Rekayasa (Lead combustion engineer + direct WhatsApp CTA) -->
+  <KonsultasiTim />
+</BaseLayout>

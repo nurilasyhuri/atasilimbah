@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const pageTitle = 'Galeri Proyek dan Dokumentasi Fabrikasi - AtasiLimbah';
+const pageDescription = 'Dokumentasi tahapan fabrikasi mesin incinerator di workshop, instalasi refractory bata tahan api, kalibrasi burner, dan pengujian cerobong scrubber.';
+
+const projectRecords = [
+  {
+    title: 'Fabrikasi Ruang Bakar Ganda Unit AL-DK50',
+    location: 'Workshop Fabrikasi Logam, Jawa Barat',
+    scope: 'Pekerjaan pengelasan struktur plat baja 8mm dan pemasangan isolasi ceramic fiber.',
+    category: 'Fabrikasi Mesin',
+    status: 'Selesai & Uji Fungsi',
+  },
+  {
+    title: 'Instalasi Bata Api Refractory SK-34 & SK-36',
+    location: 'Workshop Perakitan Tungku',
+    scope: 'Penyusunan bata api tahan panas 1.200°C dengan mortar tahan api pada ruang primer dan sekunder.',
+    category: 'Thermal Refractory',
+    status: 'Selesai & Curing',
+  },
+  {
+    title: 'Pengujian Sistem Burner & Wet Scrubber Model AL-DK100',
+    location: 'Fasilitas Uji Komponen',
+    scope: 'Kalibrasi rasio udara-bahan bakar burner solar, verifikasi pompa sirkulasi scrubber, dan pengujian kebocoran gas.',
+    category: 'Commissioning Test',
+    status: 'Lulus Uji Teknis',
+  },
+  {
+    title: 'Rancang Bangun Sistem Incinerator Custom Industri',
+    location: 'Kawasan Industri Manufaktur',
+    scope: 'Perancangan cerobong stainless steel tahan korosi dan integrasi panel PLC touchscreen pengaman.',
+    category: 'Custom Engineering',
+    status: 'Pemasangan Lapangan',
+  },
+];
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin berkonsultasi mengenai dokumentasi proyek dan portofolio fabrikasi mesin incinerator.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-[#F3F5F2] py-12 lg:py-16 border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-[#576360] mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-[#123F35]">Dokumentasi Proyek</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-[#123F35]/10 text-[#123F35] text-xs font-bold rounded mb-3 font-tech">
+          PORTOFOLIO & WORKSHOP
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#123F35] tracking-tight mb-4">
+          Dokumentasi Mesin & Pekerjaan Fabrikasi
+        </h1>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Kenali proses produksi dan rekayasa yang dikembangkan AtasiLimbah melalui dokumentasi pekerjaan fabrikasi mesin, pemasangan lapisan tahan api, serta pengujian komponen di workshop.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Cards Grid -->
+  <section class="py-16 bg-white border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {projectRecords.map((item) => (
+          <div class="p-6 bg-[#F3F5F2] rounded-lg border border-[#E2E6E1] flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-semibold px-2.5 py-1 bg-[#123F35]/10 text-[#123F35] rounded font-tech">
+                  {item.category}
+                </span>
+                <span class="text-xs text-[#576360] font-medium">
+                  {item.status}
+                </span>
+              </div>
+              <h2 class="text-lg font-bold text-[#123F35] mb-2">{item.title}</h2>
+              <p class="text-xs text-[#576360] mb-3"><span class="font-semibold text-[#123F35]">Lokasi:</span> {item.location}</p>
+              <p class="text-xs sm:text-sm text-[#576360] leading-relaxed">{item.scope}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation CTA -->
+  <section class="py-16 bg-slate-950 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-[-0.015em]">
+        Diskusikan Rencana Instalasi di Fasilitas Anda
+      </h2>
+      <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
+        Ketahui syarat teknis fondasi lantai, ketinggian atap cerobong, serta ketersediaan pasokan listrik dan air untuk sistem wet scrubber.
+      </p>
+      <div class="pt-2">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs sm:text-sm font-bold text-white bg-[#123F35] hover:bg-[#0e3129] rounded-full shadow-xs transition-colors"
+        >
+          Konsultasi Instalasi via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

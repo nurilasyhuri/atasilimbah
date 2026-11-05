@@ -1,0 +1,145 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const allProducts = await getCollection('products');
+const dryProducts = allProducts.filter((p) => p.data.category === 'sampah-kering');
+
+const pageTitle = 'Mesin Incinerator Sampah Kering Non-B3 Teruji - AtasiLimbah';
+const pageDescription = 'Solusi mesin incinerator sampah kering non-B3 untuk institusi, pesantren, dan komersial dengan teknologi dual chamber dan siklon penangkap abu.';
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin berkonsultasi mengenai mesin incinerator sampah kering non-B3.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-[#F3F5F2] py-12 lg:py-16 border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-[#576360] mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li><a href="/mesin-incinerator/" class="hover:underline">Produk</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-[#123F35]">Sampah Kering</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-[#123F35]/10 text-[#123F35] text-xs font-bold rounded mb-3 font-tech">
+          KATEGORI 01 — SOLID NON-B3
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#123F35] tracking-tight mb-4">
+          Mesin Incinerator Sampah Kering
+        </h1>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Sistem pembakaran termal terkontrol untuk pengolahan sampah padat kering non-B3 yang memiliki karakteristik nilai kalor memadai. Dirancang untuk fasilitas pendidikan, kawasan komersial, resort, dan fasilitas usaha.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Operating Parameters -->
+  <section class="py-16 bg-white border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-2xl font-bold text-[#123F35] mb-4">
+            Karakteristik Material yang Sesuai
+          </h2>
+          <p class="text-sm text-[#576360] leading-relaxed mb-6">
+            Mesin kategori ini bekerja paling efisien saat mengolah material padat dengan kandungan air rendah hingga sedang (&lt; 20-30%).
+          </p>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-3.5 bg-[#F3F5F2] rounded border border-[#E2E6E1]">
+              <strong class="text-[#123F35] block mb-1">Kertas, Kardus & Karton Arsip:</strong>
+              <span class="text-[#576360]">Nilai kalor tinggi, proses pembakaran cepat tanpa residu berlebih.</span>
+            </div>
+            <div class="p-3.5 bg-[#F3F5F2] rounded border border-[#E2E6E1]">
+              <strong class="text-[#123F35] block mb-1">Kemasan Kayu Kering & Ranting Bersih:</strong>
+              <span class="text-[#576360]">Biomassa padat kering yang mendukung kestabilan suhu ruang primer.</span>
+            </div>
+            <div class="p-3.5 bg-[#F3F5F2] rounded border border-[#E2E6E1]">
+              <strong class="text-[#123F35] block mb-1">Kain Perca & Serat Tekstil Kering:</strong>
+              <span class="text-[#576360]">Residu pemotongan non-sintetis klorin untuk reduksi volume seketika.</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-[#123F35] mb-4">
+            Keunggulan Sistem Dual Chamber
+          </h2>
+          <p class="text-sm text-[#576360] leading-relaxed mb-6">
+            Semua unit sampah kering AtasiLimbah dilengkapi dua ruang bakar terpisah untuk mencegah timbulnya jelaga pekat:
+          </p>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-[#576360]">
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded bg-[#123F35] text-white flex items-center justify-center font-bold text-xs shrink-0 font-tech">1</span>
+              <span><strong>Primary Chamber (800°C - 900°C):</strong> Destruksi pirolisis material padat menjadi gas dan abu dasar (*bottom ash*).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded bg-[#123F35] text-white flex items-center justify-center font-bold text-xs shrink-0 font-tech">2</span>
+              <span><strong>Secondary Chamber (1.000°C - 1.100°C):</strong> Oksidasi termal gas buang dengan pasokan oksigen turbulen selama minimal 2 detik.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded bg-[#123F35] text-white flex items-center justify-center font-bold text-xs shrink-0 font-tech">3</span>
+              <span><strong>Pembersih Siklon & Scrubber:</strong> Menangkap partikel abu terbang sebelum gas buang dilepaskan ke cerobong atmosfer.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommended Models -->
+  <section class="py-16 bg-[#F3F5F2] border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#123F35] block mb-2">Model Tersedia</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#123F35] tracking-tight">
+          Pilihan Mesin Incinerator Sampah Kering
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+        {dryProducts.map((p) => (
+          <ProductCard product={p} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contextual Single Consultation CTA -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#123F35] tracking-tight">
+        Konsultasikan Volume Sampah Kering Fasilitas Anda
+      </h2>
+      <p class="text-sm sm:text-base text-[#576360] leading-relaxed max-w-2xl mx-auto">
+        Ketahui perkiraan kebutuhan kapasitas (50 kg/jam vs 100 kg/jam) serta simulasi konsumsi bahan bakar berdasarkan timbulan harian sampah Anda.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs sm:text-sm font-bold text-white bg-[#123F35] hover:bg-[#0e3129] rounded-full shadow-xs transition-colors"
+        >
+          Konsultasi Mesin Sampah Kering
+        </a>
+        <a
+          href="/permintaan-penawaran/"
+          class="text-xs sm:text-sm text-slate-600 hover:text-slate-950 underline underline-offset-4 transition-colors py-1"
+        >
+          Atau kirim formulir RFQ &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

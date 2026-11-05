@@ -1,0 +1,137 @@
+---
+import { COMPANY_INFO } from '../data/companyInfo';
+import { formatTitle, formatDescription } from '../utils/seo';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  jsonLd?: Record<string, any> | Array<Record<string, any>>;
+  noindex?: boolean;
+}
+
+const {
+  title: rawTitle,
+  description: rawDescription,
+  canonical,
+  image = '/images/og-atasilimbah.webp',
+  type = 'website',
+  jsonLd,
+  noindex = false,
+} = Astro.props;
+
+const siteUrl = COMPANY_INFO.domain;
+
+let pathname = Astro.url.pathname;
+if (!pathname.endsWith('/')) {
+  pathname += '/';
+}
+
+const canonicalUrl = canonical || `${siteUrl}${pathname}`;
+const finalTitle = formatTitle(rawTitle);
+const finalDescription = formatDescription(rawDescription);
+const resolvedImage = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? image : `/${image}`}`;
+
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbItems = [
+  {
+    '@type': 'ListItem',
+    position: 1,
+    name: 'Beranda',
+    item: `${siteUrl}/`,
+  },
+  ...pathSegments.map((segment, index) => {
+    const url = `${siteUrl}/${pathSegments.slice(0, index + 1).join('/')}/`;
+    const formattedName = segment
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+    return {
+      '@type': 'ListItem',
+      position: index + 2,
+      name: formattedName,
+      item: url,
+    };
+  }),
+];
+
+const organizationSchema = {
+  '@type': ['Organization', 'LocalBusiness'],
+  '@id': `${siteUrl}/#organization`,
+  name: COMPANY_INFO.name,
+  legalName: COMPANY_INFO.legalName,
+  url: siteUrl,
+  logo: `${siteUrl}/images/logo-atasilimbah.webp`,
+  image: resolvedImage,
+  description: COMPANY_INFO.description,
+  telephone: COMPANY_INFO.contact.phoneFormatted,
+  email: COMPANY_INFO.contact.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: COMPANY_INFO.contact.workshopAddress,
+    addressCountry: 'ID',
+  },
+};
+
+const websiteSchema = {
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: siteUrl,
+  name: COMPANY_INFO.name,
+  description: COMPANY_INFO.description,
+  publisher: {
+    '@id': `${siteUrl}/#organization`,
+  },
+};
+
+const breadcrumbsSchema = {
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems,
+};
+
+const customSchemas = Array.isArray(jsonLd) ? jsonLd : (jsonLd ? [jsonLd] : []);
+
+const structuredDataGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    organizationSchema,
+    websiteSchema,
+    breadcrumbsSchema,
+    ...customSchemas,
+  ],
+};
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{finalTitle}</title>
+<meta name="description" content={finalDescription} />
+<link rel="canonical" href={canonicalUrl} />
+
+<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+<meta name="author" content={COMPANY_INFO.name} />
+<meta name="publisher" content={COMPANY_INFO.name} />
+<meta name="format-detection" content="telephone=no" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={finalTitle} />
+<meta property="og:description" content={finalDescription} />
+<meta property="og:image" content={resolvedImage} />
+<meta property="og:site_name" content={COMPANY_INFO.name} />
+<meta property="og:locale" content="id_ID" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={finalTitle} />
+<meta name="twitter:description" content={finalDescription} />
+<meta name="twitter:image" content={resolvedImage} />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23123F35' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'/></svg>" />
+
+<!-- JSON-LD Structured Data -->
+<script is:inline type="application/ld+json" set:html={JSON.stringify(structuredDataGraph)} />

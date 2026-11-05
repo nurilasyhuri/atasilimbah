@@ -1,0 +1,128 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const allProducts = await getCollection('products');
+// Products suitable for mixed non-B3 waste: models with drying room, steam, or high capacity
+const mixedProducts = allProducts.filter((p) => 
+  p.data.category === 'sampah-kering' || 
+  p.data.category === 'sampah-basah' ||
+  p.data.modelCode === 'AL-1000H' ||
+  p.data.modelCode === 'AL-1500H' ||
+  p.data.modelCode === 'AL-300H'
+).slice(0, 6);
+
+const pageTitle = 'Incinerator Sampah Campuran Non-B3 Terpilah - AtasiLimbah';
+const pageDescription = 'Mesin incinerator sampah campuran non-B3 untuk fasilitas pengolahan sampah dan kawasan komersial dengan evaluasi teknis dan sistem emisi terkontrol.';
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin berkonsultasi mengenai mesin incinerator sampah campuran non-B3.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-slate-50 py-12 lg:py-16 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-slate-500 mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li><a href="/mesin-incinerator/" class="hover:underline">Produk</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-slate-900">Sampah Campuran Non-B3</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight mb-4">
+          Incinerator Sampah Campuran Non-B3
+        </h1>
+        <p class="text-base text-slate-600 leading-relaxed">
+          Sistem pembakaran termal untuk campuran residu sampah yang telah dipilah dan dipastikan sesuai dengan desain mesin. Dirancang khusus untuk fasilitas pengolahan sampah mandiri, kawasan komersial, dan sentra kegiatan masyarakat.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Operating Parameters -->
+  <section class="py-16 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-950 mb-4">
+            Karakteristik & Target Pengolahan
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">
+            Diperuntukkan bagi fasilitas yang mengelola timbulan sampah majemuk dengan komposisi organik, kertas, kardus, plastik terpilah, dan residu domestik non-B3.
+          </p>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+              <strong class="text-slate-950 block mb-1">Target Fasilitas:</strong>
+              <span class="text-slate-600">Fasilitas TPS3R, kawasan komersial, pasar modern, kawasan resort, dan pusat pengolahan sampah mandiri.</span>
+            </div>
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+              <strong class="text-slate-950 block mb-1">Kebutuhan Pemilahan Awal:</strong>
+              <span class="text-slate-600">Material logam, kaca, dan limbah bahan beracun berbahaya (B3) wajib dipisahkan sebelum dimasukkan ke ruang pembakaran.</span>
+            </div>
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+              <strong class="text-slate-950 block mb-1">Pengendalian Emisi:</strong>
+              <span class="text-slate-600">Dilengkapi siklon penangkap fly ash dan wet scrubber spray pendingin cerobong agar asap buang transparan.</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-slate-950 mb-4">
+            Kepatuhan & Efisiensi Operasional
+          </h2>
+          <div class="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p>
+              Setiap unit dirancang dengan ruang bakar ganda (*dual chamber*) bersuhu 800°C – 1.000°C guna memastikan seluruh senyawa volatil terbakar sempurna pada ruang kedua (*secondary chamber*) sebelum dilepaskan melalui sistem cerobong.
+            </p>
+            <p>
+              Konstruksi dinding dilapisi bahan refraktori tahan api berkualitas (bata SK-34 atau castable padat) dengan isolasi ganda sehingga temperatur dinding luar tungku tetap aman disentuh operator.
+            </p>
+            <div class="p-4 bg-orange-50 border-l-4 border-orange-500 rounded-r-xl text-orange-950">
+              <strong>Konsultasi Karakteristik Sampah:</strong>
+              <p class="mt-1">Tim kami siap membantu pengujian sampel atau estimasi komposisi timbulan harian di fasilitas Anda sebelum menentukan kapasitas unit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Lineup Grid -->
+  <section class="py-16 sm:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+          Model Rekomendasi Sampah Campuran
+        </h2>
+        <p class="text-sm text-slate-600 mt-2">
+          Pilihan unit incinerator dengan fleksibilitas pembakaran sampah majemuk terpilah.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {mixedProducts.map((p) => (
+          <ProductCard product={p} />
+        ))}
+      </div>
+
+      <div class="mt-14 text-center">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-md transition-colors"
+        >
+          <span>Konsultasi Sampah Campuran via WhatsApp 0851-8300-5070</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

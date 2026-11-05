@@ -1,0 +1,702 @@
+{
+  "capturedAt": "2026-11-05T09:35:55.665Z",
+  "viewports": {
+    "390": {
+      "url": "http://localhost:4321/mesin-incinerator/al-1000j/",
+      "width": 390,
+      "height": 6963,
+      "title": "Incinerator Kontinu Kapasitas 1 Ton/Jam Spesifikasi - AtasiLimbah",
+      "headingMax": 24,
+      "type": {
+        "families": [
+          {
+            "v": "Poppins",
+            "c": 5408
+          },
+          {
+            "v": "IBM Plex Sans",
+            "c": 570
+          }
+        ],
+        "sizes": [
+          {
+            "v": "12px",
+            "c": 2841
+          },
+          {
+            "v": "16px",
+            "c": 2796
+          },
+          {
+            "v": "14px",
+            "c": 157
+          },
+          {
+            "v": "18px",
+            "c": 92
+          },
+          {
+            "v": "24px",
+            "c": 92
+          }
+        ],
+        "weights": [
+          {
+            "v": "400",
+            "c": 4221
+          },
+          {
+            "v": "700",
+            "c": 793
+          },
+          {
+            "v": "600",
+            "c": 771
+          },
+          {
+            "v": "500",
+            "c": 121
+          },
+          {
+            "v": "800",
+            "c": 51
+          }
+        ],
+        "roles": {
+          "a": {
+            "size": "12px",
+            "weight": "400",
+            "lineHeight": "16px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h1": {
+            "size": "24px",
+            "weight": "800",
+            "lineHeight": "32px",
+            "letterSpacing": "-0.48px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "p": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h2": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "-0.32px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h3": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "-0.32px",
+            "family": "Poppins",
+            "transform": "none"
+          }
+        }
+      },
+      "color": {
+        "text": [
+          {
+            "v": "rgb(2, 6, 23)",
+            "c": 2062
+          },
+          {
+            "v": "oklch(0.279 0.041 260.031)",
+            "c": 1038
+          },
+          {
+            "v": "oklch(0.704 0.04 256.788)",
+            "c": 778
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 586
+          },
+          {
+            "v": "oklch(0.446 0.043 257.281)",
+            "c": 571
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 268
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 2886367.1875
+          },
+          {
+            "v": "oklch(0.984 0.003 247.858)",
+            "c": 726578
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 629789.8125
+          },
+          {
+            "v": "oklab(0.984 -0.00113071 -0.00277876 / 0.6)",
+            "c": 277324
+          },
+          {
+            "v": "oklab(0.208 -0.00310889 -0.0418848 / 0.8)",
+            "c": 93549.875
+          },
+          {
+            "v": "oklch(0.646 0.222 41.116)",
+            "c": 29568
+          }
+        ]
+      },
+      "radius": [
+        {
+          "v": "12px",
+          "c": 9
+        },
+        {
+          "v": "3.35544e+07px",
+          "c": 6
+        },
+        {
+          "v": "16px",
+          "c": 5
+        },
+        {
+          "v": "8px",
+          "c": 1
+        }
+      ],
+      "sections": [
+        {
+          "tag": "header",
+          "y": 0,
+          "h": 73,
+          "bg": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "y": 73,
+          "h": 655,
+          "bg": "oklch(0.984 0.003 247.858)",
+          "cols": 1,
+          "imgs": 0,
+          "heading": {
+            "tag": "h1",
+            "size": "24px",
+            "text": "Incinerator Kontinu Kapasitas 1 Ton/Jam"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 728,
+          "h": 4679,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 2,
+          "heading": {
+            "tag": "h2",
+            "size": "16px",
+            "text": "Gambaran Umum Incinerator Kontinu Kapasitas 1 Ton/"
+          }
+        },
+        {
+          "tag": "footer",
+          "y": 5407,
+          "h": 1556,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h3",
+            "size": "12px",
+            "text": "KATALOG MESIN"
+          }
+        }
+      ]
+    },
+    "768": {
+      "url": "http://localhost:4321/mesin-incinerator/al-1000j/",
+      "width": 768,
+      "height": 4823,
+      "title": "Incinerator Kontinu Kapasitas 1 Ton/Jam Spesifikasi - AtasiLimbah",
+      "headingMax": 30,
+      "type": {
+        "families": [
+          {
+            "v": "Poppins",
+            "c": 5489
+          },
+          {
+            "v": "IBM Plex Sans",
+            "c": 584
+          }
+        ],
+        "sizes": [
+          {
+            "v": "12px",
+            "c": 2860
+          },
+          {
+            "v": "16px",
+            "c": 2796
+          },
+          {
+            "v": "14px",
+            "c": 233
+          },
+          {
+            "v": "18px",
+            "c": 75
+          },
+          {
+            "v": "30px",
+            "c": 60
+          },
+          {
+            "v": "24px",
+            "c": 32
+          },
+          {
+            "v": "20px",
+            "c": 17
+          }
+        ],
+        "weights": [
+          {
+            "v": "400",
+            "c": 4221
+          },
+          {
+            "v": "600",
+            "c": 794
+          },
+          {
+            "v": "700",
+            "c": 793
+          },
+          {
+            "v": "500",
+            "c": 193
+          },
+          {
+            "v": "800",
+            "c": 51
+          }
+        ],
+        "roles": {
+          "a": {
+            "size": "12px",
+            "weight": "400",
+            "lineHeight": "16px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h1": {
+            "size": "30px",
+            "weight": "800",
+            "lineHeight": "36px",
+            "letterSpacing": "-0.6px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "p": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h2": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "-0.32px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h3": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "-0.32px",
+            "family": "Poppins",
+            "transform": "none"
+          }
+        }
+      },
+      "color": {
+        "text": [
+          {
+            "v": "rgb(2, 6, 23)",
+            "c": 2062
+          },
+          {
+            "v": "oklch(0.279 0.041 260.031)",
+            "c": 1038
+          },
+          {
+            "v": "oklch(0.704 0.04 256.788)",
+            "c": 795
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 586
+          },
+          {
+            "v": "oklch(0.446 0.043 257.281)",
+            "c": 571
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 268
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 3858156.28125
+          },
+          {
+            "v": "oklch(0.984 0.003 247.858)",
+            "c": 1217184
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 766703
+          },
+          {
+            "v": "oklab(0.984 -0.00113071 -0.00277876 / 0.6)",
+            "c": 343563
+          },
+          {
+            "v": "oklab(0.208 -0.00310889 -0.0418848 / 0.8)",
+            "c": 88846.25
+          },
+          {
+            "v": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+            "c": 84480
+          }
+        ]
+      },
+      "radius": [
+        {
+          "v": "12px",
+          "c": 9
+        },
+        {
+          "v": "3.35544e+07px",
+          "c": 8
+        },
+        {
+          "v": "16px",
+          "c": 5
+        },
+        {
+          "v": "8px",
+          "c": 1
+        }
+      ],
+      "sections": [
+        {
+          "tag": "header",
+          "y": 0,
+          "h": 110,
+          "bg": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "y": 110,
+          "h": 473,
+          "bg": "oklch(0.984 0.003 247.858)",
+          "cols": 1,
+          "imgs": 0,
+          "heading": {
+            "tag": "h1",
+            "size": "30px",
+            "text": "Incinerator Kontinu Kapasitas 1 Ton/Jam"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 583,
+          "h": 3316,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 2,
+          "heading": {
+            "tag": "h2",
+            "size": "16px",
+            "text": "Gambaran Umum Incinerator Kontinu Kapasitas 1 Ton/"
+          }
+        },
+        {
+          "tag": "footer",
+          "y": 3899,
+          "h": 924,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h3",
+            "size": "12px",
+            "text": "KATALOG MESIN"
+          }
+        }
+      ]
+    },
+    "1440": {
+      "url": "http://localhost:4321/mesin-incinerator/al-1000j/",
+      "width": 1440,
+      "height": 3932,
+      "title": "Incinerator Kontinu Kapasitas 1 Ton/Jam Spesifikasi - AtasiLimbah",
+      "headingMax": 36,
+      "type": {
+        "families": [
+          {
+            "v": "Poppins",
+            "c": 5535
+          },
+          {
+            "v": "IBM Plex Sans",
+            "c": 584
+          }
+        ],
+        "sizes": [
+          {
+            "v": "12px",
+            "c": 2860
+          },
+          {
+            "v": "16px",
+            "c": 2796
+          },
+          {
+            "v": "14px",
+            "c": 279
+          },
+          {
+            "v": "18px",
+            "c": 75
+          },
+          {
+            "v": "36px",
+            "c": 39
+          },
+          {
+            "v": "24px",
+            "c": 32
+          },
+          {
+            "v": "30px",
+            "c": 21
+          },
+          {
+            "v": "20px",
+            "c": 17
+          }
+        ],
+        "weights": [
+          {
+            "v": "400",
+            "c": 4221
+          },
+          {
+            "v": "600",
+            "c": 800
+          },
+          {
+            "v": "700",
+            "c": 793
+          },
+          {
+            "v": "500",
+            "c": 233
+          },
+          {
+            "v": "800",
+            "c": 51
+          }
+        ],
+        "roles": {
+          "a": {
+            "size": "14px",
+            "weight": "500",
+            "lineHeight": "20px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h1": {
+            "size": "36px",
+            "weight": "800",
+            "lineHeight": "40px",
+            "letterSpacing": "-0.72px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "p": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "normal",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h2": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "-0.32px",
+            "family": "Poppins",
+            "transform": "none"
+          },
+          "h3": {
+            "size": "16px",
+            "weight": "400",
+            "lineHeight": "26px",
+            "letterSpacing": "-0.32px",
+            "family": "Poppins",
+            "transform": "none"
+          }
+        }
+      },
+      "color": {
+        "text": [
+          {
+            "v": "rgb(2, 6, 23)",
+            "c": 2062
+          },
+          {
+            "v": "oklch(0.279 0.041 260.031)",
+            "c": 1038
+          },
+          {
+            "v": "oklch(0.704 0.04 256.788)",
+            "c": 795
+          },
+          {
+            "v": "oklch(0.208 0.042 265.755)",
+            "c": 586
+          },
+          {
+            "v": "oklch(0.446 0.043 257.281)",
+            "c": 571
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 268
+          }
+        ],
+        "background": [
+          {
+            "v": "rgb(255, 255, 255)",
+            "c": 5447680.453125
+          },
+          {
+            "v": "oklch(0.984 0.003 247.858)",
+            "c": 1460363.21875
+          },
+          {
+            "v": "oklch(0.129 0.042 264.695)",
+            "c": 811352.4765625
+          },
+          {
+            "v": "oklab(0.984 -0.00113071 -0.00277876 / 0.6)",
+            "c": 363829.21875
+          },
+          {
+            "v": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+            "c": 158400
+          },
+          {
+            "v": "oklab(0.208 -0.00310889 -0.0418848 / 0.8)",
+            "c": 100344
+          }
+        ]
+      },
+      "radius": [
+        {
+          "v": "3.35544e+07px",
+          "c": 14
+        },
+        {
+          "v": "12px",
+          "c": 9
+        },
+        {
+          "v": "16px",
+          "c": 5
+        }
+      ],
+      "sections": [
+        {
+          "tag": "header",
+          "y": 0,
+          "h": 110,
+          "bg": "oklab(0.129 -0.0038832 -0.0418201 / 0.98)",
+          "cols": 1,
+          "imgs": 4,
+          "heading": null
+        },
+        {
+          "tag": "section",
+          "y": 110,
+          "h": 485,
+          "bg": "oklch(0.984 0.003 247.858)",
+          "cols": 1,
+          "imgs": 0,
+          "heading": {
+            "tag": "h1",
+            "size": "36px",
+            "text": "Incinerator Kontinu Kapasitas 1 Ton/Jam"
+          }
+        },
+        {
+          "tag": "section",
+          "y": 595,
+          "h": 2820,
+          "bg": "rgb(255, 255, 255)",
+          "cols": 1,
+          "imgs": 2,
+          "heading": {
+            "tag": "h2",
+            "size": "16px",
+            "text": "Gambaran Umum Incinerator Kontinu Kapasitas 1 Ton/"
+          }
+        },
+        {
+          "tag": "footer",
+          "y": 3415,
+          "h": 517,
+          "bg": "oklch(0.129 0.042 264.695)",
+          "cols": 1,
+          "imgs": 6,
+          "heading": {
+            "tag": "h3",
+            "size": "12px",
+            "text": "KATALOG MESIN"
+          }
+        }
+      ]
+    }
+  }
+}

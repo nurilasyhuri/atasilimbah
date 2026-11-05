@@ -1,0 +1,57 @@
+---
+// Alur Layanan section with Soft Background (#F3F5F2) and Clean Green & White Badges
+const steps = [
+  {
+    num: '01',
+    title: 'Konsultasi Kebutuhan',
+    desc: 'Estimasi volume timbulan & jenis limbah via WhatsApp.',
+  },
+  {
+    num: '02',
+    title: 'Penawaran SPH Resmi',
+    desc: 'SPH spesifikasi teknik, RAB, dan faktur resmi PKP.',
+  },
+  {
+    num: '03',
+    title: 'Fabrikasi Workshop',
+    desc: 'Pengerjaan plat baja tebal & bata api refractory SK-34.',
+  },
+  {
+    num: '04',
+    title: 'Siap Pakai & Garansi',
+    desc: 'Instalasi on-site, test burn, dan pelatihan operator.',
+  },
+];
+---
+
+<section class="py-16 sm:py-20 lg:py-24 bg-[#F3F5F2] border-b border-[#E2E6E1]" aria-label="Alur Pengadaan Incinerator">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mb-10 sm:mb-14">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1E2926] tracking-tight leading-tight">
+        Alur Layanan Pengadaan
+      </h2>
+    </div>
+
+    <!-- 4 Step Cards (Clean numbered progression) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {steps.map((st) => (
+        <div class="p-6 sm:p-7 bg-white rounded-2xl border border-[#E2E6E1] hover:border-[#123F35]/40 transition-colors duration-150 flex flex-col justify-between shadow-2xs">
+          <div class="mb-6">
+            <span class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#123F35] text-white text-lg font-bold font-tech shadow-xs">
+              {st.num}
+            </span>
+          </div>
+
+          <div class="space-y-1.5">
+            <h3 class="text-base sm:text-lg font-bold text-[#1E2926]">
+              {st.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-[#576360] leading-relaxed">
+              {st.desc}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

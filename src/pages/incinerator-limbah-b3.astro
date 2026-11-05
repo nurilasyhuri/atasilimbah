@@ -1,0 +1,164 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const allProducts = await getCollection('products');
+const b3Products = allProducts.filter((p) => p.data.category === 'limbah-b3');
+
+const pageTitle = 'Mesin Incinerator Limbah B3 Tertentu Suhu Tinggi - AtasiLimbah';
+const pageDescription = 'Sistem pengolahan termal suhu tinggi untuk jenis limbah B3 tertentu dengan secondary chamber 1.200°C, scrubber alkali, dan interlock otomatis.';
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin berkonsultasi mengenai persyaratan teknis incinerator limbah B3 tertentu.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-[#F3F5F2] py-12 lg:py-16 border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-[#576360] mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li><a href="/mesin-incinerator/" class="hover:underline">Produk</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-[#123F35]">Limbah B3</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-[#123F35]/10 text-[#123F35] text-xs font-bold rounded mb-3 font-tech">
+          KATEGORI 03 — HAZARDOUS THERMAL DESTRUCTION
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#123F35] tracking-tight mb-4">
+          Mesin Incinerator Limbah B3 Tertentu
+        </h1>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Sistem insinerasi termal bertemperatur tinggi untuk jenis limbah Bahan Berbahaya dan Beracun (B3) padat tertentu yang memenuhi kriteria pengolahan termal dengan sistem kendali emisi ketat.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal & Regulatory Boundary Notice -->
+  <section class="py-8 bg-[#F3F5F2] border-b border-[#123F35]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-6 bg-white rounded-lg border border-[#123F35]/20 shadow-2xs space-y-3">
+        <div class="flex items-center gap-2 text-sm font-bold text-[#123F35] uppercase tracking-wide">
+          <svg class="w-5 h-5 shrink-0 text-[#123F35]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          Pemberitahuan Kepatuhan Hukum & Regulasi Lingkungan
+        </div>
+        <p class="text-xs sm:text-sm text-[#1E2926] leading-relaxed">
+          <strong>PENTING:</strong> Produk ini hanya dapat dipesan dan digunakan untuk aplikasi yang memenuhi klasifikasi teknis limbah dan ketentuan lingkungan yang berlaku. Pembelian atau kepemilikan mesin incinerator B3 dari AtasiLimbah tidak dengan sendirinya berarti fasilitas pemohon telah memiliki izin pengolahan limbah B3. Pemohon wajib memastikan kepemilikan dokumen lingkungan (AMDAL/UKL-UPL) serta izin operasional dari Kementerian Lingkungan Hidup dan Kehutanan (KLHK) atau instansi berwenang.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Standards -->
+  <section class="py-16 bg-white border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-2xl font-bold text-[#123F35] mb-4">
+            Standar Teknis Destruksi Termal B3
+          </h2>
+          <p class="text-sm text-[#576360] leading-relaxed mb-6">
+            Insinerasi limbah B3 mengacu pada regulasi baku mutu teknis insinerator:
+          </p>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-[#576360]">
+            <li class="p-3 bg-[#F3F5F2] rounded border border-[#E2E6E1]">
+              <strong class="text-[#123F35] block mb-1">Temperatur Ruang Sekunder 1.000°C - 1.200°C:</strong>
+              <span>Memastikan pemutusan ikatan senyawa hidrokarbon terklorinasi dan pencegahan pembentukan rekombinasi dioksin/furan.</span>
+            </li>
+            <li class="p-3 bg-[#F3F5F2] rounded border border-[#E2E6E1]">
+              <strong class="text-[#123F35] block mb-1">Waktu Tinggal Gas (Retention Time) ≥ 2 Detik:</strong>
+              <span>Volume ruang sekunder dirancang luas dengan turbulensi tinggi untuk memastikan reaksi destruksi tuntas.</span>
+            </li>
+            <li class="p-3 bg-[#F3F5F2] rounded border border-[#E2E6E1]">
+              <strong class="text-[#123F35] block mb-1">Efisiensi Penghancuran (DRE ≥ 99.99%):</strong>
+              <span>Desain termal ditargetkan untuk mencapai nilai Destruction and Removal Efficiency sesuai standar uji komisioning.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-[#123F35] mb-4">
+            Pengendalian Emisi Gas Buang Khusus
+          </h2>
+          <p class="text-sm text-[#576360] leading-relaxed mb-6">
+            Sistem pengolahan gas buang multi-tahap yang terintegrasi pada model AL-B3-50:
+          </p>
+
+          <div class="space-y-3 text-xs sm:text-sm text-[#576360]">
+            <div class="p-3.5 bg-[#F3F5F2] rounded border border-[#E2E6E1]">
+              <strong class="text-[#123F35] block mb-1">Rapid Quencher Tower</strong>
+              <span>Menurunkan suhu gas buang seketika dari 1.000°C ke &lt; 200°C guna melewati rentang suhu pembentukan kembali dioksin (250°C - 400°C).</span>
+            </div>
+            <div class="p-3.5 bg-[#F3F5F2] rounded border border-[#E2E6E1]">
+              <strong class="text-[#123F35] block mb-1">Packed Bed Alkali Scrubber</strong>
+              <span>Menetralkan gas bersifat asam agresif (HCl, SO2, HF) menggunakan cairan basa tersirkulasi (NaOH).</span>
+            </div>
+            <div class="p-3.5 bg-[#F3F5F2] rounded border border-[#E2E6E1]">
+              <strong class="text-[#123F35] block mb-1">Safety Interlock Door System</strong>
+              <span>Pintu pengumpan sampah terkunci secara otomatis jika temperatur ruang kedua belum mencapai syarat minimal 1.000°C.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Models -->
+  <section class="py-16 bg-[#F3F5F2] border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#123F35] block mb-2">Model Suhu Tinggi</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#123F35] tracking-tight">
+          Pilihan Mesin Incinerator Limbah B3
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
+        {b3Products.map((p) => (
+          <ProductCard product={p} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contextual Single Consultation CTA -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#123F35] tracking-tight">
+        Konsultasi Teknis & Regulasi Incinerator B3
+      </h2>
+      <p class="text-sm sm:text-base text-[#576360] leading-relaxed max-w-2xl mx-auto">
+        Diskusikan jenis kode limbah B3 padat yang Anda hasilkan serta kaji kelayakan teknologi destruksi termal bersama tim ahli AtasiLimbah.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs sm:text-sm font-bold text-white bg-[#123F35] hover:bg-[#0e3129] rounded-full shadow-xs transition-colors"
+        >
+          Konsultasi Teknis Incinerator B3
+        </a>
+        <a
+          href="/permintaan-penawaran/"
+          class="text-xs sm:text-sm text-slate-600 hover:text-slate-950 underline underline-offset-4 transition-colors py-1"
+        >
+          Atau kirim formulir RFQ &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

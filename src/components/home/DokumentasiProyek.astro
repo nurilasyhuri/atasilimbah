@@ -1,0 +1,84 @@
+---
+// Dokumentasi Proyek section with Soft Background (#F3F5F2) and Primary Dark Green (#123F35)
+const projects = [
+  {
+    title: 'Instalasi Incinerator & Wet Scrubber',
+    location: 'Fasilitas Klien',
+    image: '/images/doc-pemasangan-lapangan.webp',
+    desc: 'Unit operasional dual chamber terhubung ke siklon pembersih asap.',
+  },
+  {
+    title: 'Inspeksi Ruang Bakar Bata Tahan Api',
+    location: 'Workshop Fabrikasi',
+    image: '/images/doc-refractory-inspeksi.webp',
+    desc: 'Pengecekan ketebalan plat baja dan bata isolasi refractory SK-34.',
+  },
+  {
+    title: 'Perakitan Cerobong Siklon di Lapangan',
+    location: 'Instalasi On-Site',
+    image: '/images/doc-ducting-cerobong.webp',
+    desc: 'Pemasangan tabung pemisah abu siklon dan cerobong semprot.',
+  },
+  {
+    title: 'Unit Incinerator Siap Kirim',
+    location: 'QC & Dispatch',
+    image: '/images/doc-tungku-siapkirim.webp',
+    desc: 'Pengecekan akhir tungku insulasi ganda sebelum pengiriman logistik.',
+  },
+];
+---
+
+<section class="py-16 sm:py-20 lg:py-24 bg-[#F3F5F2] border-b border-[#E2E6E1]" aria-label="Dokumentasi Proyek & Workshop">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-14 gap-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1E2926] tracking-tight leading-tight">
+          Dokumentasi Fabrikasi & Instalasi Unit
+        </h2>
+      </div>
+
+      <div class="shrink-0">
+        <a
+          href="/proyek/"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#123F35]/30 hover:border-[#123F35] hover:text-[#123F35] text-xs sm:text-sm font-semibold text-[#1E2926] transition-colors duration-150"
+        >
+          <span>Semua Dokumentasi</span>
+          <svg class="w-4 h-4 text-[#123F35]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- 4 Project Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {projects.map((pr) => (
+        <div class="group bg-white rounded-2xl border border-[#E2E6E1] overflow-hidden hover:border-[#123F35]/50 hover:shadow-md transition-colors duration-150">
+          <div class="overflow-hidden aspect-[4/3] bg-slate-100">
+            <img
+              src={pr.image}
+              alt={pr.title}
+              class="w-full h-full object-cover group-hover:scale-104 transition-transform duration-200"
+              width="600"
+              height="450"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="p-5 space-y-1.5">
+            <div class="text-xs font-bold text-[#123F35] font-tech">
+              {pr.location}
+            </div>
+            <h3 class="text-sm sm:text-base font-bold text-[#1E2926] group-hover:text-[#123F35] transition-colors line-clamp-1">
+              {pr.title}
+            </h3>
+            <p class="text-xs text-[#576360] leading-relaxed line-clamp-2">
+              {pr.desc}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
