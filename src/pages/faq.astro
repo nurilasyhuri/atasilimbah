@@ -52,15 +52,15 @@ const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waTex
         <ol class="flex items-center gap-1.5">
           <li><a href="/" class="hover:underline">Beranda</a></li>
           <li><span>/</span></li>
-          <li class="font-semibold text-[#123F35]">FAQ</li>
+          <li class="font-semibold text-[#1E482C]">FAQ</li>
         </ol>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-[#123F35]/10 text-[#123F35] text-xs font-bold rounded mb-3 font-tech">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-[#1E482C]/10 text-[#1E482C] text-xs font-bold rounded mb-3 font-tech">
           INFORMASI & JAWABAN TEKNIS
         </div>
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#123F35] tracking-tight mb-4">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1E482C] tracking-tight mb-4">
           Tanya Jawab Seputar Mesin Incinerator
         </h1>
         <p class="text-base text-[#576360] leading-relaxed">
@@ -75,9 +75,9 @@ const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waTex
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
       {allFaqs.map((faq) => (
         <details class="group bg-[#F3F5F2] rounded-lg border border-[#E2E6E1] p-5 transition-colors">
-          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-[#123F35] list-none select-none">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-[#1E482C] list-none select-none">
             <span>{faq.q}</span>
-            <span class="ml-4 flex-shrink-0 text-[#123F35] group-open:rotate-180 transition-transform">
+            <span class="ml-4 flex-shrink-0 text-[#1E482C] group-open:rotate-180 transition-transform">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
@@ -105,7 +105,7 @@ const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waTex
           href={waUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs sm:text-sm font-bold text-white bg-[#123F35] hover:bg-[#0e3129] rounded-full shadow-xs transition-colors"
+          class="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs sm:text-sm font-bold text-white bg-[#1E482C] hover:bg-[#153620] rounded-full shadow-xs transition-colors"
         >
           Tanya Langsung via WhatsApp
         </a>

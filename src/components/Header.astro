@@ -10,7 +10,7 @@ const isCurrent = (href: string) => {
 };
 ---
 
-<header class="sticky top-0 z-50 w-full bg-[#123F35] border-b border-white/15 text-white transition-colors duration-150">
+<header class="sticky top-0 z-50 w-full bg-[#1E482C] border-b border-white/15 text-white transition-colors duration-150">
   <!-- Main Navbar -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-18 sm:h-20">
@@ -56,7 +56,7 @@ const isCurrent = (href: string) => {
 
                 <!-- Floating Dropdown Card (Deep Green & Clean White) -->
                 <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50 w-[420px] pointer-events-none group-hover:pointer-events-auto">
-                  <div class="bg-[#0e3129] border border-white/15 rounded-2xl p-3 shadow-2xl shadow-black/60 backdrop-blur-md">
+                  <div class="bg-[#153620] border border-white/15 rounded-2xl p-3 shadow-2xl shadow-black/60 backdrop-blur-md">
                     <div class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-white font-tech border-b border-white/10 mb-1.5 flex items-center justify-between">
                       <span>PILIHAN KATEGORI PRODUK</span>
                       <a href="/mesin-incinerator/" class="text-xs normal-case text-white/80 hover:text-white font-normal underline">Semua Unit &rarr;</a>
@@ -68,7 +68,7 @@ const isCurrent = (href: string) => {
                           href={`/${cat.slug}/`}
                           class="group/item flex items-start gap-3 p-2.5 rounded-xl hover:bg-white/10 transition-colors"
                         >
-                          <span class="w-6 h-6 rounded-lg bg-white/10 border border-white/15 text-white flex items-center justify-center font-tech text-xs font-bold shrink-0 mt-0.5 group-hover/item:bg-white group-hover/item:text-[#123F35] transition-colors">
+                          <span class="w-6 h-6 rounded-lg bg-white/10 border border-white/15 text-white flex items-center justify-center font-tech text-xs font-bold shrink-0 mt-0.5 group-hover/item:bg-white group-hover/item:text-[#1E482C] transition-colors">
                             {idx + 1}
                           </span>
                           <div class="flex-1 min-w-0">
@@ -118,9 +118,9 @@ const isCurrent = (href: string) => {
       <div class="hidden sm:flex items-center gap-3">
         <a
           href="/permintaan-penawaran/"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-slate-100 text-[#123F35] text-xs sm:text-sm font-bold shadow-md shadow-black/20 transition-colors duration-150"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-slate-100 text-[#1E482C] text-xs sm:text-sm font-bold shadow-md shadow-black/20 transition-colors duration-150"
         >
-          <svg class="w-4 h-4 text-[#123F35]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="w-4 h-4 text-[#1E482C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
             <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -156,7 +156,7 @@ const isCurrent = (href: string) => {
   </div>
 
   <!-- Mobile / Tablet Navigation Drawer -->
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-white/15 bg-[#0e3129] px-4 pt-3 pb-6 space-y-2">
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-white/15 bg-[#153620] px-4 pt-3 pb-6 space-y-2">
     {COMPANY_INFO.navItems.map((item) => {
       const active = isCurrent(item.href);
 
@@ -202,7 +202,7 @@ const isCurrent = (href: string) => {
     <div class="pt-3 border-t border-white/10 flex flex-col gap-2">
       <a
         href="/permintaan-penawaran/"
-        class="flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-white text-[#123F35] text-xs font-bold shadow-xs hover:bg-slate-100"
+        class="flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-white text-[#1E482C] text-xs font-bold shadow-xs hover:bg-slate-100"
       >
         <span>Minta Surat Penawaran SPH</span>
       </a>

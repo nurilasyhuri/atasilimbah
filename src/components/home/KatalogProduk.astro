@@ -1,5 +1,5 @@
 ---
-// Katalog Produk section with Primary Dark Green (#123F35) and Pure White (#FFFFFF)
+// Katalog Produk section with Primary Dark Green (#1E482C) and Pure White (#FFFFFF)
 import { getCollection } from 'astro:content';
 
 const allProducts = await getCollection('products');
@@ -19,10 +19,10 @@ const sortedProducts = allProducts.sort((a, b) => (a.data.orderPriority || 99) -
       <div class="shrink-0">
         <a
           href="/mesin-incinerator/"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#123F35]/30 hover:border-[#123F35] hover:text-[#123F35] text-xs sm:text-sm font-semibold text-[#1E2926] transition-colors duration-150"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#1E482C]/30 hover:border-[#1E482C] hover:text-[#1E482C] text-xs sm:text-sm font-semibold text-[#1E2926] transition-colors duration-150"
         >
           <span>Katalog Lengkap</span>
-          <svg class="w-4 h-4 text-[#123F35]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="w-4 h-4 text-[#1E482C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14"></path>
             <path d="m12 5 7 7-7 7"></path>
           </svg>
@@ -41,7 +41,7 @@ const sortedProducts = allProducts.sort((a, b) => (a.data.orderPriority || 99) -
         return (
           <a
             href={`/mesin-incinerator/${p.id}/`}
-            class="group block bg-white rounded-2xl border border-[#E2E6E1] p-5 hover:border-[#123F35] hover:shadow-md transition-colors duration-150 flex flex-col justify-between focus:outline-none"
+            class="group block bg-white rounded-2xl border border-[#E2E6E1] p-5 hover:border-[#1E482C] hover:shadow-md transition-colors duration-150 flex flex-col justify-between focus:outline-none"
           >
             <div>
               <div class="overflow-hidden rounded-xl bg-[#F3F5F2] aspect-[4/3] mb-5 border border-[#E2E6E1] flex items-center justify-center p-2">
@@ -56,13 +56,13 @@ const sortedProducts = allProducts.sort((a, b) => (a.data.orderPriority || 99) -
               </div>
 
               <div class="text-center space-y-1.5 px-2">
-                <div class="text-xs font-bold text-[#123F35] font-tech uppercase tracking-wider">
+                <div class="text-xs font-bold text-[#1E482C] font-tech uppercase tracking-wider">
                   {d.modelCode}
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-[#1E2926] group-hover:text-[#123F35] transition-colors line-clamp-1">
+                <h3 class="text-base sm:text-lg font-bold text-[#1E2926] group-hover:text-[#1E482C] transition-colors line-clamp-1">
                   {d.title}
                 </h3>
-                <div class="text-sm font-extrabold text-[#123F35] font-tech">
+                <div class="text-sm font-extrabold text-[#1E482C] font-tech">
                   {formattedPrice}
                   <span class="text-xs font-normal text-[#576360]"> / unit</span>
                 </div>
@@ -71,7 +71,7 @@ const sortedProducts = allProducts.sort((a, b) => (a.data.orderPriority || 99) -
 
             <div class="mt-5 pt-4 border-t border-[#E2E6E1] flex items-center justify-between text-xs text-[#576360]">
               <span>Kapasitas: <strong class="text-[#1E2926] font-tech">{d.nominalCapacity}</strong></span>
-              <span class="text-[#123F35] font-bold group-hover:text-[#0e3129] group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+              <span class="text-[#1E482C] font-bold group-hover:text-[#153620] group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
                 Detail →
               </span>
             </div>

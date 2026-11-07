@@ -21,12 +21,12 @@ const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waTex
         <ol class="flex items-center gap-1.5">
           <li><a href="/" class="hover:underline">Beranda</a></li>
           <li><span>/</span></li>
-          <li class="font-semibold text-[#123F35]">Solusi Sektoral</li>
+          <li class="font-semibold text-[#1E482C]">Solusi Sektoral</li>
         </ol>
       </nav>
 
       <div class="max-w-3xl">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#123F35] tracking-tight mb-4">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1E482C] tracking-tight mb-4">
           Solusi Pengolahan Sampah Berdasarkan Sektor
         </h1>
         <p class="text-base text-[#576360] leading-relaxed">
@@ -42,10 +42,10 @@ const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waTex
       {solutions.map((sol) => (
         <div class="p-8 bg-[#F3F5F2] rounded-lg border border-[#E2E6E1] grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div class="lg:col-span-7 space-y-4">
-            <span class="text-xs font-bold text-[#123F35] uppercase tracking-wider font-tech block">
+            <span class="text-xs font-bold text-[#1E482C] uppercase tracking-wider font-tech block">
               SEKTOR: {sol.data.sector.toUpperCase()}
             </span>
-            <h2 class="text-2xl font-bold text-[#123F35]">
+            <h2 class="text-2xl font-bold text-[#1E482C]">
               <a href={`/${sol.id}/`} class="hover:underline underline-offset-4">
                 {sol.data.title}
               </a>
@@ -55,7 +55,7 @@ const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waTex
             </p>
 
             <div class="pt-2">
-              <span class="block text-xs font-bold text-[#123F35] uppercase mb-2">Fasilitas Sasaran:</span>
+              <span class="block text-xs font-bold text-[#1E482C] uppercase mb-2">Fasilitas Sasaran:</span>
               <div class="flex flex-wrap gap-2">
                 {sol.data.targetFacilities.map((fac) => (
                   <span class="text-xs px-2.5 py-1 bg-white rounded border border-[#E2E6E1] text-[#1E2926]">
@@ -67,11 +67,11 @@ const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waTex
           </div>
 
           <div class="lg:col-span-5 bg-white p-6 rounded border border-[#E2E6E1] space-y-4">
-            <span class="block text-xs font-bold text-[#123F35] uppercase">Keuntungan Utama:</span>
+            <span class="block text-xs font-bold text-[#1E482C] uppercase">Keuntungan Utama:</span>
             <ul class="space-y-2 text-xs text-[#576360]">
               {sol.data.benefits.slice(0, 3).map((b) => (
                 <li class="flex items-start gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#123F35] shrink-0 mt-1"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#1E482C] shrink-0 mt-1"></span>
                   <span>{b}</span>
                 </li>
               ))}
@@ -80,7 +80,7 @@ const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waTex
             <div class="pt-4 border-t border-[#E2E6E1]">
               <a
                 href={`/${sol.id}/`}
-                class="inline-flex items-center justify-center w-full px-4 py-2.5 text-xs font-semibold text-white bg-[#123F35] hover:bg-[#1a574a] rounded transition-colors text-center"
+                class="inline-flex items-center justify-center w-full px-4 py-2.5 text-xs font-semibold text-white bg-[#1E482C] hover:bg-[#285E39] rounded transition-colors text-center"
               >
                 Pelajari Solusi Sektor Lengkap &rarr;
               </a>
@@ -92,7 +92,7 @@ const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waTex
   </section>
 
   <!-- Consultation CTA -->
-  <section class="py-16 bg-[#123F35] text-white">
+  <section class="py-16 bg-[#1E482C] text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
         Fasilitas Anda Memiliki Kebutuhan Berbeda?
@@ -105,7 +105,7 @@ const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waTex
           href={waUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-[#123F35] bg-white hover:bg-slate-100 rounded shadow-xs transition-colors"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-[#1E482C] bg-white hover:bg-slate-100 rounded shadow-xs transition-colors"
         >
           Konsultasi Solusi Sektoral via WhatsApp
         </a>

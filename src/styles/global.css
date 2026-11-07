@@ -2,20 +2,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-green: #123F35;
-  --color-primary-deep: #0e3129;
-  --color-brand-emerald: #10b981;
+  --color-primary-green: #1E482C;
+  --color-primary-deep: #153620;
+  --color-brand-emerald: #2E7D32;
   --color-soft-bg: #F3F5F2;
   --color-text-dark: #1E2926;
 
-  /* Pure Green & Clean White Semantic Tokens */
-  --color-brand-primary: #123F35;
-  --color-brand-secondary: #0e3129;
-  --color-brand-surface: #0e3129;
-  --color-brand-dark: #123F35;
+  /* Elegant Leaf Green Semantic Tokens */
+  --color-brand-primary: #1E482C;
+  --color-brand-secondary: #153620;
+  --color-brand-surface: #153620;
+  --color-brand-dark: #1E482C;
   --color-brand-light: #F3F5F2;
   --color-brand-muted: #576360;
   --color-brand-border: #E2E6E1;
+
+  /* Botanical Leaf Green Scale */
+  --color-emerald-50: #F1F8F2;
+  --color-emerald-100: #DCEDDD;
+  --color-emerald-200: #BDDCBE;
+  --color-emerald-300: #93C495;
+  --color-emerald-400: #5FA563;
+  --color-emerald-500: #3D8B41;
+  --color-emerald-600: #2E7D32;
+  --color-emerald-700: #256629;
+  --color-emerald-800: #1D5220;
+  --color-emerald-900: #164119;
+  --color-emerald-950: #0C260E;
 
   --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

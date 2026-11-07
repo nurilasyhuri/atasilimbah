@@ -15,7 +15,7 @@ const formattedPrice = data.price
 
 <a
   href={`/mesin-incinerator/${product.id}/`}
-  class="group block bg-white rounded-2xl border border-[#E2E6E1] overflow-hidden hover:border-[#123F35] hover:shadow-md transition-colors duration-150 flex flex-col justify-between focus:outline-none"
+  class="group block bg-white rounded-2xl border border-[#E2E6E1] overflow-hidden hover:border-[#1E482C] hover:shadow-md transition-colors duration-150 flex flex-col justify-between focus:outline-none"
 >
   <div>
     <!-- Product Thumbnail -->
@@ -32,7 +32,7 @@ const formattedPrice = data.price
 
     <div class="p-6">
       <div class="flex items-center justify-between gap-2 mb-2">
-        <span class="text-xs font-bold text-[#123F35] font-tech tracking-wider uppercase">
+        <span class="text-xs font-bold text-[#1E482C] font-tech tracking-wider uppercase">
           {data.modelCode}
         </span>
         <span class="text-xs text-[#576360] font-semibold font-tech">
@@ -40,13 +40,13 @@ const formattedPrice = data.price
         </span>
       </div>
 
-      <h3 class="text-base sm:text-lg font-bold text-[#1E2926] group-hover:text-[#123F35] transition-colors duration-150 mb-1.5">
+      <h3 class="text-base sm:text-lg font-bold text-[#1E2926] group-hover:text-[#1E482C] transition-colors duration-150 mb-1.5">
         {data.title}
       </h3>
 
       <!-- Price Tag -->
       <div class="mb-3">
-        <span class="text-base sm:text-lg font-extrabold text-[#123F35] font-tech">
+        <span class="text-base sm:text-lg font-extrabold text-[#1E482C] font-tech">
           {formattedPrice}
         </span>
       </div>
@@ -63,7 +63,7 @@ const formattedPrice = data.price
         </div>
         <div class="flex justify-between text-[#576360]">
           <span class="font-medium">Suhu Operasional:</span>
-          <span class="font-bold text-[#123F35] font-tech">{data.operatingTemp || '800°C - 1.000°C'}</span>
+          <span class="font-bold text-[#1E482C] font-tech">{data.operatingTemp || '800°C - 1.000°C'}</span>
         </div>
         <div class="flex justify-between text-[#576360]">
           <span class="font-medium">Bahan Bakar:</span>
@@ -78,9 +78,9 @@ const formattedPrice = data.price
   </div>
 
   <div class="p-6 pt-3 border-t border-[#E2E6E1] bg-[#F3F5F2] flex items-center justify-between">
-    <span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#1E2926] group-hover:text-[#123F35] transition-colors duration-150">
+    <span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#1E2926] group-hover:text-[#1E482C] transition-colors duration-150">
       <span>Spesifikasi Lengkap & Harga</span>
-      <svg class="w-3.5 h-3.5 text-[#123F35] group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <svg class="w-3.5 h-3.5 text-[#1E482C] group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M5 12h14"></path>
         <path d="m12 5 7 7-7 7"></path>
       </svg>
