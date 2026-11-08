@@ -7,7 +7,7 @@ const productsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     modelCode: z.string(),
-    category: z.enum(['sampah-kering', 'sampah-basah', 'limbah-b3', 'custom']),
+    category: z.enum(['sampah-kering', 'sampah-basah', 'limbah-b3', 'custom', 'biochar']),
     categoryLabel: z.string(),
     description: z.string(),
     nominalCapacity: z.string(),

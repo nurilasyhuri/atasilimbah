@@ -72,6 +72,12 @@ export const COMPANY_INFO = {
       desc: 'Perancangan teknis dan fabrikasi khusus sesuai kapasitas, layout ruang, dan karakteristik unik timbulan limbah.',
       target: 'Kustomisasi spesifikasi & tata letak fasilitas',
     },
+    {
+      title: 'Mesin Karbonisasi Biochar',
+      slug: 'mesin-karbonisasi-biochar',
+      desc: 'Unit pirolisis limbah biomassa pertanian & perkebunan menjadi biochar berkualitas dengan standar emisi bersih.',
+      target: 'Sentra pertanian, perkebunan & pengolahan biomassa',
+    },
   ] as ProductCategory[],
   categories: [
     {
@@ -93,6 +99,11 @@ export const COMPANY_INFO = {
       title: 'Custom Incinerator System',
       slug: 'incinerator-custom',
       desc: 'Perancangan dan fabrikasi mesin incinerator sesuai kapasitas dan tata letak fasilitas pelanggan.',
+    },
+    {
+      title: 'Mesin Karbonisasi Biochar',
+      slug: 'mesin-karbonisasi-biochar',
+      desc: 'Unit pirolisis biomassa dual-chamber hemat energi untuk konversi limbah organik menjadi biochar bernilai tinggi.',
     },
   ],
 };

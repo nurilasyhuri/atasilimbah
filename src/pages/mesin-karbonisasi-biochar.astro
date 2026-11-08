@@ -1,0 +1,173 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { COMPANY_INFO } from '../data/companyInfo';
+
+const allProducts = await getCollection('products');
+const biocharProducts = allProducts.filter((p) => p.data.category === 'biochar');
+
+const pageTitle = 'Mesin Karbonisasi Biochar & Pirolisis Biomassa - AtasiLimbah';
+const pageDescription = 'Jual mesin karbonisasi biochar dan pirolisis biomassa dual-chamber hemat energi. Mengolah sekam padi, tongkol jagung, dan serbuk kayu menjadi biochar bermutu tinggi.';
+
+const waText = encodeURIComponent('Halo Tim AtasiLimbah, saya ingin berkonsultasi mengenai mesin karbonisasi biochar / carbonizer biomassa.');
+const waUrl = `https://wa.me/${COMPANY_INFO.contact.whatsappNumber}?text=${waText}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Header -->
+  <section class="bg-[#F3F5F2] py-12 lg:py-16 border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-[#576360] mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:underline">Beranda</a></li>
+          <li><span>/</span></li>
+          <li><a href="/mesin-incinerator/" class="hover:underline">Produk</a></li>
+          <li><span>/</span></li>
+          <li class="font-semibold text-[#1E482C]">Mesin Karbonisasi Biochar</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-[#1E482C]/10 text-[#1E482C] text-xs font-bold rounded mb-3 font-tech">
+          TEKNOLOGI BIOMASSA & VALORISASI LIMBAH PERTANIAN
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1E482C] tracking-tight mb-4">
+          Mesin Karbonisasi Biochar & Pirolisis Biomassa
+        </h1>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Ubah limbah pertanian, perkebunan, dan sisa perkayuan menjadi biochar bermutu tinggi dengan nilai ekonomi tinggi. Dilengkapi teknologi ruang bakar ganda (*dual-chamber*) hemat energi dan emisi bersih tersertifikasi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="py-16 bg-white border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#1E482C] block mb-2">Model Unit Karbonisasi</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1E482C] tracking-tight mb-4">
+          Daftar Model Mesin Biochar Tersedia
+        </h2>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Temukan model mesin karbonisasi pirolisis biochar dengan efisiensi konversi tinggi dan pengoperasian otomatis yang mudah diintegrasikan di lokasi sentra limbah.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {biocharProducts.map((prod) => (
+          <ProductCard product={prod} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section class="py-16 bg-[#F3F5F2] border-b border-[#E2E6E1]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#1E482C] block mb-2">Keunggulan Teknologi Pirolisis</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1E482C] tracking-tight mb-4">
+          Mengapa Menggunakan Mesin Biochar AtasiLimbah?
+        </h2>
+        <p class="text-base text-[#576360] leading-relaxed">
+          Solusi teruji yang membedakan unit pirolisis modern dengan sistem pembakaran arang konvensional terbuka yang berasap tebal dan merusak lingkungan.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-xl border border-[#E2E6E1] shadow-2xs">
+          <div class="w-10 h-10 rounded-lg bg-[#1E482C]/10 text-[#1E482C] flex items-center justify-center font-bold text-lg mb-4 font-tech">
+            01
+          </div>
+          <h3 class="text-lg font-bold text-[#1E2926] mb-2">Efisiensi Mandiri Energi (Syngas)</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Gas pirolisis (*syngas*) disirkulasikan kembali sebagai bahan bakar pemanas sekunder, memangkas konsumsi biomassa pemanas hingga 80% dan tanpa BBM.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl border border-[#E2E6E1] shadow-2xs">
+          <div class="w-10 h-10 rounded-lg bg-[#1E482C]/10 text-[#1E482C] flex items-center justify-center font-bold text-lg mb-4 font-tech">
+            02
+          </div>
+          <h3 class="text-lg font-bold text-[#1E2926] mb-2">Kualitas Biochar Berstandar CSI</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Suhu pirolisis 500°C–650°C terkontrol menghasilkan biochar dengan stabilitas karbon tinggi, kadar abu terukur, dan porositas prima untuk pembenah tanah.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl border border-[#E2E6E1] shadow-2xs">
+          <div class="w-10 h-10 rounded-lg bg-[#1E482C]/10 text-[#1E482C] flex items-center justify-center font-bold text-lg mb-4 font-tech">
+            03
+          </div>
+          <h3 class="text-lg font-bold text-[#1E2926] mb-2">Potensi Pendapatan Kredit Karbon</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Memenuhi standar Global Artisan C-Sink (Carbon Standards International) yang memungkinkan verifikasi dMRV dan penjualan kredit penyerapan karbon.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl border border-[#E2E6E1] shadow-2xs">
+          <div class="w-10 h-10 rounded-lg bg-[#1E482C]/10 text-[#1E482C] flex items-center justify-center font-bold text-lg mb-4 font-tech">
+            04
+          </div>
+          <h3 class="text-lg font-bold text-[#1E2926] mb-2">Konstruksi Stainless Steel SS 304</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Material ruang proses bermutu tinggi tahan korosi gas asam dan deformasi suhu tinggi, menjamin ketahanan masa pakai alat hingga 5 tahun.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl border border-[#E2E6E1] shadow-2xs">
+          <div class="w-10 h-10 rounded-lg bg-[#1E482C]/10 text-[#1E482C] flex items-center justify-center font-bold text-lg mb-4 font-tech">
+            05
+          </div>
+          <h3 class="text-lg font-bold text-[#1E2926] mb-2">Hemat Tenaga Kerja & Otomatis</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Hopper kapasitas besar menampung bahan baku untuk 2-4 jam proses kontinu. Cukup 1 operator dengan jam kerja aktif hanya 2-4 jam per shift.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl border border-[#E2E6E1] shadow-2xs">
+          <div class="w-10 h-10 rounded-lg bg-[#1E482C]/10 text-[#1E482C] flex items-center justify-center font-bold text-lg mb-4 font-tech">
+            06
+          </div>
+          <h3 class="text-lg font-bold text-[#1E2926] mb-2">Garansi & Supervisi Komisioning</h3>
+          <p class="text-sm text-[#576360] leading-relaxed">
+            Dukungan instalasi on-site oleh tim teknisi kami, manual operasional lengkap, garansi servis 12 bulan, dan jaminan ketersediaan suku cadang.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-[#1E482C] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
+        Konsultasikan Pemanfaatan Limbah Biomassa Anda
+      </h2>
+      <p class="text-base text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
+        Kirimkan sampel atau info jenis limbah biomassa Anda (sekam, tongkol jagung, serbuk kayu, batok kelapa) untuk pengujian kelayakan dan perhitungan nilai keekonomian biochar.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-bold text-[#1E482C] bg-white hover:bg-slate-100 transition-colors shadow-md"
+        >
+          <svg class="w-4 h-4 text-[#1E482C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          Konsultasi via WhatsApp
+        </a>
+        <a
+          href="/permintaan-penawaran/"
+          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full text-sm font-semibold text-white border border-white/40 hover:bg-white/10 transition-colors"
+        >
+          Minta Proposal & SPH
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
