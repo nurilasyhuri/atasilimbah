@@ -32,6 +32,7 @@ export const COMPANY_INFO = {
     { label: 'Produk', href: '/mesin-incinerator/', hasDropdown: true },
     { label: 'Solusi', href: '/solusi-pengolahan-sampah/' },
     { label: 'Teknologi', href: '/teknologi-incinerator/' },
+    { label: 'Artikel', href: '/artikel/' },
     { label: 'Tentang Kami', href: '/tentang-kami/' },
     { label: 'Kontak', href: '/kontak/' },
   ] as NavItem[],
