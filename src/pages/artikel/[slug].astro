@@ -144,10 +144,10 @@ const schemas = [breadcrumbSchema, articleSchema];
 
       <!-- Tags & Share Footer -->
       <footer class="pt-8 border-t border-gray-200 mb-12">
-        <div class="flex flex-wrap items-center gap-2 mb-8">
-          <span class="text-xs font-bold uppercase tracking-wider text-gray-500 mr-2">Topik Terkait:</span>
+        <div class="flex flex-wrap items-baseline gap-x-2.5 text-xs text-gray-500 mb-8">
+          <span class="font-bold uppercase tracking-wider text-gray-700">Tag:</span>
           {data.tags.map((tag: string) => (
-            <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-md font-medium">
+            <span class="text-gray-700 hover:underline underline-offset-4 cursor-pointer">
               #{tag}
             </span>
           ))}
